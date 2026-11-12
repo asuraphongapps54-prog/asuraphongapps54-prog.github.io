@@ -278,7 +278,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
           <div class="field"><label for="b-shop">ชื่อกิจการ <span class="opt">(ถ้ามี)</span></label><input id="b-shop" placeholder="เช่น หอพักบ้านสวน"></div>
         </div>
         <div class="f2c">
-          <div class="field"><label for="b-type">ประเภทธุรกิจ</label><select id="b-type"></select></div>
+          <div class="field"><label for="b-type">ประเภทธุรกิจ</label><select id="b-type"></select><div id="b-note"></div></div>
           <div class="field"><label for="b-users">คนที่ใช้แอป <span class="opt">(ประมาณ)</span></label><select id="b-users"><option>1–5 คน</option><option>6–20 คน</option><option>21–100 คน</option><option>มากกว่า 100 คน</option></select></div>
         </div>
         <div class="field"><span class="lab" id="b-f-l">ฟังก์ชันที่อยากได้ <span class="opt">(เลือกได้หลายข้อ)</span></span><div class="chips" id="b-feats" role="group" aria-labelledby="b-f-l"></div></div>
@@ -316,17 +316,37 @@ const CONFIG = {
   phone: '',                                  // ไม่แสดงเบอร์บนเว็บ (ให้เฉพาะลูกค้าโปรในแอป)
   email: 'asuraphongapps54@gmail.com',                 // อีเมลธุรกิจ (เว้นว่างได้)
   hours: 'ตอบแชตทุกวัน 17:00–21:00 น.',
-  leadApi: 'https://script.google.com/macros/s/AKfycbzYIz390j9N45Jj2NKoErYEN1di8MX3vv4z93281B-AMYNv-Y4QckFABrcl8IGkSgU-/exec',                                // ลิงก์ /exec ของ leads.gs (เว้นว่าง = ให้ลูกค้าคัดลอกบรีฟส่ง LINE)
+  leadApi: 'https://script.google.com/macros/s/AKfycbzYIz390j9N45Jj2NKoErYEN1di8MX3vv4z93281B-AMYNv-Y4QckFABrcl8IGkSgU-/exec',                                // ลิงก์ /exec ของยานแม่ (เว้นว่าง = ให้ลูกค้าคัดลอกบรีฟส่ง LINE)
   briefDays: 7,                               // ส่งเดโมให้ลองภายในกี่วัน
   price: { pro: '359', proNote: 'ซื้อขาด จ่ายครั้งเดียว · 1 รหัส ใช้ได้ 1 กิจการ', ma: '', ultimate: '' },   // เว้นว่าง = "สอบถามราคา" เช่น pro: '2,990'
   apps: [
     { id:'dorm', name:'แอปหอพัก', for:'หอพัก อพาร์ตเมนต์ คอนโดให้เช่า', status:'live', icon:'home', grad:'g1',
-      demo:'https://asuraphongapps54-prog.github.io/dorm/demo.html',
+      demo:'https://asuraphongapps54-prog.github.io/apartment/demo.html',
       feats:['บิลค่าเช่า น้ำ ไฟ ส่วนกลาง','ผู้เช่าส่งสลิปเอง','รับพัสดุ สแกนบาร์โค้ด','แจ้งซ่อมพร้อมรูป','ผังห้องว่าง / ค้างชำระ','บันทึกผู้มาติดต่อ ค่าจอด','รปภ. ถ่ายรูปจุดตรวจ','5 ตำแหน่ง ตั้งสิทธิ์เองได้'] },
-    { id:'food', name:'แอปร้านอาหาร', for:'ร้านอาหาร คาเฟ่ ฟู้ดคอร์ต', status:'soon', icon:'food', grad:'g3', feats:['ลูกค้าสแกน QR สั่งที่โต๊ะ','ครัวเห็นออเดอร์ทันที','สรุปยอดขายรายวัน'] },
+    { id:'food', name:'แอปร้านอาหาร', for:'ร้านอาหาร คาเฟ่ บาร์ ฟู้ดคอร์ต', status:'soon', icon:'food', grad:'g3', feats:['ลูกค้าสแกน QR สั่งที่โต๊ะ','ครัวเห็นออเดอร์ทันที','สรุปยอดขายรายวัน'] },
     { id:'repair', name:'แอปร้านซ่อม / รับงาน', for:'ร้านซ่อมมือถือ แอร์ รถ ช่างรับงาน', status:'soon', icon:'wrench', grad:'g2', feats:['ใบรับงานพร้อมรูปก่อนซ่อม','ลูกค้าเช็กสถานะเอง','แจ้งค่าใช้จ่ายก่อนซ่อม'] },
-    { id:'queue', name:'แอปนัดคิว', for:'คลินิก ร้านเสริมสวย สปา', status:'soon', icon:'calendar', grad:'g4', feats:['ลูกค้าจองคิวผ่านลิงก์','เตือนนัดล่วงหน้า','ประวัติลูกค้าแต่ละคน'] },
-    { id:'stock', name:'แอปร้านค้า / สต็อก', for:'ร้านค้าปลีก มินิมาร์ท ร้านวัสดุ', status:'soon', icon:'box', grad:'g1', feats:['สแกนบาร์โค้ดรับเข้า-ขายออก','เตือนของใกล้หมด','สรุปกำไรรายเดือน'] }
+    { id:'queue', name:'แอปนัดคิว', for:'ร้านเสริมสวย สปา ฟิตเนส กวดวิชา', status:'soon', icon:'calendar', grad:'g4', feats:['ลูกค้าจองคิวผ่านลิงก์','เตือนนัดล่วงหน้า','ประวัติลูกค้าแต่ละคน'] },
+    { id:'stock', name:'แอปร้านค้า / สต็อก', for:'ร้านชำ มินิมาร์ท ร้านค้าปลีก ร้านวัสดุ', status:'soon', icon:'box', grad:'g1', feats:['สแกนบาร์โค้ดรับเข้า-ขายออก','เตือนของใกล้หมด','สรุปกำไรรายเดือน'] }
+  ],
+  /* ประเภทธุรกิจในฟอร์มส่งบรีฟ: [หมวด, แอปที่ตรงที่สุด, [ประเภทย่อย]] เพิ่ม/ลบได้ตามต้องการ */
+  bizTypes: [
+    // [หมวด, แอปที่ตรงที่สุด, [ประเภทย่อย]] · ถ้าประเภทไหนใช้แอปอื่น เขียน 'ชื่อ|แอป' เช่น 'องค์กรจัดอบรม|custom'
+    // แอป: dorm หอพัก · food ร้านอาหาร · stock ร้านค้า · repair ร้านซ่อม/รับงาน · queue นัดคิว · custom สั่งทำตามบรีฟ
+    ['ที่พักและพื้นที่ให้เช่า', 'dorm', ['หอพัก','อพาร์ตเมนต์','คอนโดให้เช่า','บ้านเช่า / ห้องแถวให้เช่า','Co-working Space / พื้นที่เช่า']],
+    ['อาหารและเครื่องดื่ม', 'food', ['ร้านอาหาร','ร้านคาเฟ่ / ร้านกาแฟ','บาร์และผับ','ร้านเบเกอรี่ / ขนม','ร้านชานม / เครื่องดื่ม','ฟู้ดทรัก / ร้านริมทาง','ครัวส่งอาหาร / ร้านเดลิเวอรี']],
+    ['ร้านค้าและคลังสินค้า', 'stock', ['ร้านชำ / โชห่วย','มินิมาร์ท','ซูเปอร์มาร์เก็ต','ร้านขายสินค้า','ร้านค้าปลีก','ร้านขายส่ง','คลังสินค้า','ร้านวัสดุก่อสร้าง / ฮาร์ดแวร์','ร้านเสื้อผ้า / แฟชั่น','ร้านค้าออนไลน์','ร้านขายยา']],
+    ['งานซ่อมและบริการ', 'repair', ['ร้านซ่อมมือถือ / คอมพิวเตอร์','ช่างแอร์ / ไฟฟ้า / ประปา','อู่ซ่อมรถ / ศูนย์บริการรถยนต์','คาร์แคร์ / ล้างรถ','ร้านซักรีด']],
+    ['ความงามและนัดหมาย', 'queue', ['ร้านเสริมสวย / ตัดผม','ร้านทำเล็บ','สปา / ร้านนวด','ฟิตเนส / สตูดิโอ / เทรนเนอร์']],
+    ['การศึกษาและคอร์สเรียน', 'queue', ['โรงเรียนกวดวิชา / ติวเตอร์','สถาบันสอนทักษะ (ดนตรี ภาษา กีฬา)','องค์กรที่จัดอบรมภายใน|custom','เนอสเซอรี / รับเลี้ยงเด็ก|custom']],
+    ['งานภาคสนามและองค์กร', 'custom', ['รับเหมาก่อสร้าง / ตกแต่งภายใน','บริษัททำความสะอาด / แม่บ้าน','ทีมขายนอกสถานที่ (เซลส์)']],
+    ['ให้เช่ารถและอุปกรณ์', 'custom', ['รถเช่า / มอเตอร์ไซค์เช่า','อุปกรณ์ให้เช่า (กล้อง เต็นท์ ชุด)','ร้านเช่าชุด / พร็อพงาน']],
+    ['งานประจำในหน่วยงาน / สำนักงาน', 'custom', ['ติดตามงานส่งต่อระหว่างแผนก (เช่น เอกสาร พัสดุ ชิ้นงาน)','เช็กลิสต์งานประจำวัน / ตารางเวร','ยืม-คืนอุปกรณ์ / ครุภัณฑ์','แจ้งซ่อมภายในองค์กร','รับ-ส่งพัสดุและเอกสารในองค์กร','บันทึกอุณหภูมิตู้เย็น / ตรวจเช็กเครื่องมือ','ลงเวลา / ขอลา / ขอ OT']],
+    ['สัตว์เลี้ยง', 'queue', ['อาบน้ำตัดขนสัตว์','คลินิกสัตว์','โรงแรมรับฝากสัตว์','ร้านขายอาหารและอุปกรณ์สัตว์|stock']],
+    ['ท่องเที่ยวและที่พักระยะสั้น', 'queue', ['โฮมสเตย์ / รีสอร์ตเล็ก','โฮสเทล','ลานกางเต็นท์ / แคมป์','ทัวร์ / ไกด์ท้องถิ่น']],
+    ['งานอีเวนต์และสร้างสรรค์', 'queue', ['รับจัดงาน / งานแต่ง','ช่างภาพ / สตูดิโอถ่ายรูป','ร้านพิมพ์ / ถ่ายเอกสาร / ป้าย|repair','ร้านดอกไม้ / ของขวัญ|stock']],
+    ['ขนส่งและส่งของ', 'custom', ['ขนส่ง / รถรับจ้างขนของ','แมสเซนเจอร์ / ส่งเอกสาร','รถรับส่งนักเรียน / พนักงาน']],
+    ['เกษตรและผลิต', 'stock', ['ฟาร์ม / สวนผลไม้','ร้านปุ๋ย / อุปกรณ์การเกษตร','วิสาหกิจชุมชน / OTOP','โรงงานขนาดเล็ก / รับผลิต OEM','งานผลิตตามสั่ง (เฟอร์นิเจอร์ ป้าย งานเหล็ก)|repair']],
+    ['ชุมชนและองค์กรไม่แสวงกำไร', 'custom', ['นิติบุคคลหมู่บ้าน / อาคารชุด|dorm','มูลนิธิ / สมาคม / ชมรม','วัด / ศาสนสถาน','สำนักงานบัญชี / กฎหมาย|queue']]
   ]
 };
 /* ======================================================================== */
@@ -337,7 +357,7 @@ const P={home:'<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1
  box:'<path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/>',check:'<path d="M20 6L9 17l-5-5"/>',x:'<path d="M18 6L6 18M6 6l12 12"/>',plus:'<path d="M12 5v14M5 12h14"/>',
  shield:'<path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>',phone:'<rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/>',
  chat:'<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/>',mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',call:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
- spark:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>',bell:'<path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 21h4"/>',logo:'<rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 12l3 3 5-6"/>',
+ spark:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>',bell:'<path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 21h4"/>',logo:'<path d="M12 3 2 8l10 5 10-5z"/><path d="m2 13 10 5 10-5"/><path d="m2 17.5 10 5 10-5" opacity=".6"/>',
  camera:'<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',open:'<path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/>'};
 const icon=(n,c)=>`<svg class="${c||'ic'}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[n]||P.box}</svg>`;
 function toast(t){const d=document.createElement('div');d.className='toast';d.setAttribute('role','status');d.textContent=t;document.body.appendChild(d);setTimeout(()=>d.remove(),2600)}
@@ -374,7 +394,7 @@ $('#plan-grid').innerHTML=`
     <ul>${L(1,'ห้องและพนักงานไม่จำกัด หลายตึก')}${L(1,'บันทึกผู้มาติดต่อ คิดค่าจอดอัตโนมัติ')}${L(1,'รปภ. ค้นทะเบียนรถ ถ่ายรูปจุดตรวจ')}${L(1,'แชตผู้เช่า เช็กลิสต์ทุกตำแหน่ง')}${L(1,'การ์ดรายรับ 6 เดือน สรุปทางอีเมลทุกเช้า')}${L(1,'ติดตั้งให้ผ่านวิดีโอคอล')}</ul>
     <a class="btn" href="#brief" data-pick="dorm">ขอใบเสนอราคา</a></article>
   <article class="plan glass"><div><span class="badge b-soon">เร็ว ๆ นี้</span><h3 style="margin-top:8px">อัลติเมต</h3><p class="muted">สำหรับหลายสาขา ระบบบนคลาวด์</p></div><div class="price">${pr(C.price.ultimate,'บาท/เดือน')}</div>
-    <ul>${L(1,'หลายสาขาในบัญชีเดียว')}${L(1,'แจ้งเตือนผ่าน LINE')}${L(1,'อัปเดตทันทีไม่ต้องรีเฟรช')}${L(1,'สัญญาเช่า เงินมัดจำ ย้ายเข้า-ออก')}${L(1,'โลโก้และโดเมนของกิจการ')}</ul>
+    <ul>${L(1,'หลายสาขาในบัญชีเดียว')}${L(1,'แจ้งเตือนผ่าน LINE')}${L(1,'อัปเดตทันทีไม่ต้องรีเฟรช')}${L(1,'ระบบสำหรับคลินิก / โรงพยาบาล')}${L(1,'โลโก้และโดเมนของกิจการ')}</ul>
     <a class="btn btn-line" href="#brief" data-pick="dorm" data-wait="1">แจ้งเมื่อเปิดตัว</a></article>`;
 
 /* ขั้นตอนสั่งทำ (เรียงตามลำดับจริง) */
@@ -384,20 +404,29 @@ $('#steps').innerHTML=[['ส่งบรีฟ','เล่างานของ�
 
 /* แบบฟอร์มบรีฟ */
 const FEATS=['บิล / รับชำระ / ตรวจสลิป','สแกนบาร์โค้ด / QR','ถ่ายรูปหลักฐาน','เช็กลิสต์งานพนักงาน','แชตกับลูกค้า','จองคิว / นัดหมาย','สต็อกสินค้า','ล็อกอินแยกตำแหน่ง','รายงาน / กราฟ','แจ้งเตือน LINE'];
-$('#b-type').innerHTML=C.apps.map(a=>`<option value="${esc(a.id)}">${esc(a.for.split(' ')[0])} (${esc(a.name)})</option>`).join('')+'<option value="other">อื่น ๆ (ระบุในรายละเอียด)</option>';
+/* value = แอป:ลำดับ (ส่งไปยานแม่เฉพาะชื่อแอป ส่วนชื่อประเภทส่งใน typeLabel) */
+$('#b-type').innerHTML=C.bizTypes.map(([g,app,list],gi)=>`<optgroup label="${esc(g)}">${list.map((t,i)=>{const[l,a2]=t.split('|');return `<option value="${esc(a2||app)}:${gi}-${i}">${esc(l)}</option>`}).join('')}</optgroup>`).join('')
+  +'<optgroup label="อื่น ๆ"><option value="custom:x">ธุรกิจอื่น (ระบุในรายละเอียด)</option><option value="custom:med">คลินิก / โรงพยาบาล (รอแพ็กเกจอัลติเมต)</option></optgroup>';
+const appOf=v=>String(v||'').split(':')[0];
+/* นโยบาย: ยังไม่รับระบบคลินิก/โรงพยาบาล (รอแพ็กเกจอัลติเมต) · ร้านขายยารับเฉพาะระบบร้านค้า */
+const typeNote=()=>{const o=$('#b-type').selectedOptions[0],v=o?o.value:'',t=o?o.textContent:'';
+  const n=v==='custom:med'?'ตอนนี้เรายังไม่รับทำระบบสำหรับคลินิกและโรงพยาบาล เพราะต้องดูแลข้อมูลผู้ป่วยตามมาตรฐานที่เข้มกว่า ระบบนี้จะมาในแพ็กเกจอัลติเมต ส่งบรีฟไว้ได้ เราจะแจ้งเมื่อเปิดให้ใช้'
+    :/ร้านขายยา/.test(t)?'ร้านขายยา: เรารับเฉพาะระบบร้านค้า (สต็อก ขายหน้าร้าน สมาชิก) ไม่เก็บข้อมูลผู้ป่วยหรือใบสั่งยา':'';
+  $('#b-note').innerHTML=n?`<div class="alert a-info" role="note" style="margin-top:8px;font-size:.88rem">${n}</div>`:''};
+$('#b-type').addEventListener('change',typeNote);
 $('#b-feats').innerHTML=FEATS.map((f,i)=>`<label class="chip" for="bf${i}"><input type="checkbox" id="bf${i}" value="${esc(f)}">${esc(f)}</label>`).join('');
 let wait=false;
-document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{const v=a.dataset.pick;if([...$('#b-type').options].some(o=>o.value===v))$('#b-type').value=v;wait=!!a.dataset.wait;
+document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{const v=a.dataset.pick,o=[...$('#b-type').options].find(o=>appOf(o.value)===v);if(o)$('#b-type').value=o.value;typeNote();wait=!!a.dataset.wait;
   if(wait&&!$('#b-detail').value)$('#b-detail').value='สนใจ '+(C.apps.find(x=>x.id===v)||{name:'แพ็กเกจอัลติเมต'}).name+' แจ้งเมื่อเปิดให้ใช้ด้วย';}));
 const val=id=>$(id).value.trim();
 function briefText(d){return `บรีฟจากเว็บ ${C.brand}\nชื่อ: ${d.name}${d.shop?' ('+d.shop+')':''}\nประเภท: ${d.typeLabel}\nคนใช้: ${d.users}\nฟังก์ชัน: ${d.feats.join(', ')||'-'}\nรายละเอียด: ${d.detail||'-'}\nติดต่อ: ${d.contact}`}
-$('#bf').addEventListener('submit',async e=>{e.preventDefault();const msg=$('#b-msg'),btn=$('#b-send');msg.innerHTML='';
-  const d={kind:wait?'รอแจ้งเปิดตัว':'บรีฟ',name:val('#b-name'),shop:val('#b-shop'),type:$('#b-type').value,typeLabel:$('#b-type').selectedOptions[0].textContent,users:$('#b-users').value,
+$('#bf').addEventListener('submit',async e=>{e.preventDefault();if($('#b-type').value==='custom:med')wait=true;const msg=$('#b-msg'),btn=$('#b-send');msg.innerHTML='';
+  const d={kind:wait?'รอแจ้งเปิดตัว':'บรีฟ',name:val('#b-name'),shop:val('#b-shop'),type:appOf($('#b-type').value),typeLabel:$('#b-type').selectedOptions[0].textContent,users:$('#b-users').value,
     feats:[...document.querySelectorAll('#b-feats input:checked')].map(x=>x.value),detail:val('#b-detail'),contact:val('#b-contact'),hp:val('#b-hp'),consent:$('#b-ok').checked,page:location.href.slice(0,200)};
   const err=!d.name?['#b-name','ใส่ชื่อผู้ติดต่อ']:!d.contact?['#b-contact','ใส่ LINE ID หรือเบอร์โทร เพื่อให้เราติดต่อกลับได้']:!/^[0-9+\-\s]{9,15}$|^@?[\w.\-]{3,30}$/.test(d.contact)?['#b-contact','ช่องติดต่อใส่ได้เป็นเบอร์โทร 9–10 หลัก หรือ LINE ID']:!d.consent?['#b-ok','กดยินยอมการเก็บข้อมูลก่อนส่ง']:null;
   if(err){msg.innerHTML=`<div class="alert a-bad" role="alert">${esc(err[1])}</div>`;$(err[0]).focus();return}
   btn.disabled=true;btn.textContent='กำลังส่ง…';
-  if(C.leadApi){try{const r=await fetch(C.leadApi,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(d)});const j=await r.json();if(!j.ok)throw new Error(j.error||'ส่งไม่สำเร็จ');
+  if(C.leadApi){try{const r=await fetch(C.leadApi,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({fn:'pubLead',args:[d]})});const j=await r.json();if(!j.ok)throw new Error(j.error||'ส่งไม่สำเร็จ');j.id=(j.result||{}).id||j.id;
       msg.innerHTML=`<div class="alert a-ok" role="status">ได้รับบรีฟแล้ว เลขที่ ${esc(j.id)} เราจะติดต่อกลับทาง ${esc(d.contact)} ภายใน 1 วันทำการ</div>`;$('#bf').reset();wait=false;btn.disabled=false;btn.textContent='ส่งบรีฟ';return}
     catch(x){/* ส่งไม่ได้ ให้คัดลอกส่งเองแทน */}}
   const t=briefText(d);
