@@ -339,16 +339,20 @@ const CONFIG = {
   hours: 'ตอบแชตทุกวัน 17:00–21:00 น.',
   leadApi: 'https://script.google.com/macros/s/AKfycbzYIz390j9N45Jj2NKoErYEN1di8MX3vv4z93281B-AMYNv-Y4QckFABrcl8IGkSgU-/exec',                                // ลิงก์ /exec ของยานแม่ (เว้นว่าง = ให้ลูกค้าคัดลอกบรีฟส่ง LINE)
   briefDays: 7,                               // ส่งเดโมให้ลองภายในกี่วัน
-  price: { pro: '359', proNote: 'ซื้อขาด จ่ายครั้งเดียว · 1 รหัส ใช้ได้ 1 กิจการ', ma: '', ultimate: '' },   // เว้นว่าง = "สอบถามราคา" เช่น pro: '2,990'
+  price: { pro: '359', proNote: 'ซื้อขาด จ่ายครั้งเดียว · 1 รหัส ใช้ได้ 1 กิจการ · ปรับแต่งให้เข้ากับธุรกิจฟรี 2 ครั้ง (ตอนซื้อ และหลังใช้งาน 1 เดือน)', ma: '', ultimate: '' },   // เว้นว่าง = "สอบถามราคา" เช่น pro: '2,990'
   apps: [
-    { id:'dorm', name:'แอปหอพัก', for:'หอพัก อพาร์ตเมนต์ คอนโดให้เช่า', status:'live', icon:'home', grad:'g1',
+    { id:'dorm', name:'แอปหอพัก', for:'หอพัก อพาร์ตเมนต์ คอนโดให้เช่า', status:'live', icon:'home', grad:'g1', cta:'ขอติดตั้งให้หอของฉัน',
+      desc:'ผู้จัดการ พนักงาน และผู้เช่า ใช้แอปเดียวกัน แต่ละคนเห็นเฉพาะเมนูของตัวเอง ผู้เช่าดูบิลและส่งสลิปได้เอง ไม่ต้องทักมาถามยอด',
       demo:'https://asuraphongapps54-prog.github.io/apartment/demo.html',
       feats:['บิลค่าเช่า น้ำ ไฟ ส่วนกลาง','ผู้เช่าส่งสลิปเอง','รับพัสดุ สแกนบาร์โค้ด','แจ้งซ่อมพร้อมรูป','ผังห้องว่าง / ค้างชำระ','บันทึกผู้มาติดต่อ ค่าจอด','รปภ. ถ่ายรูปจุดตรวจ','5 ตำแหน่ง ตั้งสิทธิ์เองได้'] },
     { id:'food', name:'แอปร้านอาหาร', for:'ร้านอาหาร คาเฟ่ บาร์ ฟู้ดคอร์ต', status:'soon', icon:'food', grad:'g3', feats:['ลูกค้าสแกน QR สั่งที่โต๊ะ','ครัวเห็นออเดอร์ทันที','สรุปยอดขายรายวัน'] },
-    { id:'repair', name:'แอปร้านซ่อม / รับงาน', for:'ร้านซ่อมมือถือ แอร์ รถ ช่างรับงาน', status:'live', icon:'wrench', grad:'g2',
+    { id:'repair', name:'แอปร้านซ่อม / รับงาน', for:'ร้านซ่อมมือถือ แอร์ รถ ช่างรับงาน', status:'live', icon:'wrench', grad:'g2', cta:'ขอติดตั้งให้ร้านของฉัน',
+      desc:'หน้าร้านรับเครื่องพร้อมถ่ายรูปสภาพ ช่างอัปเดตงาน ลูกค้าสแกน QR ดูสถานะและกดอนุมัติราคาเองได้ ไม่ต้องโทรถาม',
       demo:'https://asuraphongapps54-prog.github.io/repair/demo.html', feats:['ใบรับงานพร้อมรูปก่อนซ่อม','ลูกค้าเช็กสถานะเอง','แจ้งค่าใช้จ่ายก่อนซ่อม'] },
     { id:'queue', name:'แอปนัดคิว', for:'ร้านเสริมสวย สปา ฟิตเนส กวดวิชา', status:'soon', icon:'calendar', grad:'g4', feats:['ลูกค้าจองคิวผ่านลิงก์','เตือนนัดล่วงหน้า','ประวัติลูกค้าแต่ละคน'] },
-    { id:'stock', name:'แอปร้านค้า / สต็อก', for:'ร้านชำ มินิมาร์ท ร้านค้าปลีก ร้านวัสดุ', status:'soon', icon:'box', grad:'g1', feats:['สแกนบาร์โค้ดรับเข้า-ขายออก','เตือนของใกล้หมด','สรุปกำไรรายเดือน'] }
+    { id:'stock', name:'แอปร้านค้า / สต็อก', for:'ร้านชำ มินิมาร์ท ร้านค้าปลีก ร้านวัสดุ', status:'live', icon:'box', grad:'g1', cta:'ขอติดตั้งให้ร้านของฉัน',
+      desc:'สแกนบาร์โค้ดขายหน้าร้าน ทอนเงิน พิมพ์ใบเสร็จ ตัดสต็อกอัตโนมัติ ปิดยอดทุกวัน ปรับได้ตามประเภทร้าน: มินิมาร์ท วัสดุก่อสร้าง เสื้อผ้า สัตว์เลี้ยง เกษตร ร้านยา ดอกไม้',
+      demo:'https://asuraphongapps54-prog.github.io/stock/demo.html', feats:['ขายหน้าร้าน สแกนบาร์โค้ด ทอนเงิน','ใบเสร็จ A4 / ม้วน 80 / 58 มม.','เตือนของใกล้หมด ปิดยอดประจำวัน','โปร: เงินเชื่อ รายงานกำไร ป้ายราคา'] }
   ],
   /* ประเภทธุรกิจในฟอร์มส่งบรีฟ: [หมวด, แอปที่ตรงที่สุด, [ประเภทย่อย]] เพิ่ม/ลบได้ตามต้องการ */
   bizTypes: [
@@ -396,8 +400,8 @@ $('#facts').innerHTML=[[live.length+soon.length,'แอปตามประเ�
 $('#app-grid').innerHTML=live.map(a=>`<article class="app live glass">
     <div style="display:flex;flex-direction:column;gap:14px;min-width:0"><div class="app-h"><span class="app-ic ${a.grad}">${icon(a.icon,'')}</span><div><h3>${esc(a.name)}</h3><span class="muted" style="font-size:.9rem">${esc(a.for)}</span></div></div>
       <span class="badge b-live" style="align-self:flex-start">${icon('check','')} พร้อมใช้งาน · ใช้ฟรีได้</span>
-      <p class="muted">ผู้จัดการ พนักงาน และผู้เช่า ใช้แอปเดียวกัน แต่ละคนเห็นเฉพาะเมนูของตัวเอง ผู้เช่าดูบิลและส่งสลิปได้เอง ไม่ต้องทักมาถามยอด</p>
-      <div class="row">${a.demo?`<a class="btn btn-acc" href="${esc(a.demo)}" target="_blank" rel="noopener">${icon('open','')}ลองเดโม</a>`:''}<a class="btn btn-line" href="#brief" data-pick="${esc(a.id)}">ขอติดตั้งให้หอของฉัน</a></div></div>
+      <p class="muted">${esc(a.desc||'')}</p>
+      <div class="row">${a.demo?`<a class="btn btn-acc" href="${esc(a.demo)}" target="_blank" rel="noopener">${icon('open','')}ลองเดโม</a>`:''}<a class="btn btn-line" href="#brief" data-pick="${esc(a.id)}">${esc(a.cta||'ขอติดตั้งให้ร้านของฉัน')}</a></div></div>
     <ul>${a.feats.map(f=>`<li>${icon('check','')}<span>${esc(f)}</span></li>`).join('')}</ul></article>`).join('')
   +soon.map(a=>`<article class="app soon glass"><div class="app-h"><span class="app-ic ${a.grad}">${icon(a.icon,'')}</span><div style="min-width:0"><h3>${esc(a.name)}</h3><span class="muted" style="font-size:.88rem">${esc(a.for)}</span></div></div>
     <span class="badge b-soon" style="align-self:flex-start">กำลังพัฒนา</span><div class="feat">${a.feats.map(f=>`<span>${esc(f)}</span>`).join('')}</div>
