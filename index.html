@@ -470,12 +470,12 @@ const CONFIG = {
   hours: 'ตอบแชตทุกวัน 17:00–21:00 น.',
   leadApi: 'https://script.google.com/macros/s/AKfycbzYIz390j9N45Jj2NKoErYEN1di8MX3vv4z93281B-AMYNv-Y4QckFABrcl8IGkSgU-/exec',                                // ลิงก์ /exec ของยานแม่ (เว้นว่าง = ให้ลูกค้าคัดลอกบรีฟส่ง LINE)
   briefDays: 7,                               // ส่งเดโมให้ลองภายในกี่วัน
-  price: { pro: '299', proNote: 'ซื้อขาด จ่ายครั้งเดียว · ใช้แม่แบบตามที่เห็นในเดโม (ไม่รวมงานแก้) · 1 รหัส ใช้ได้ 1 กิจการ', ma: '', ultimate: '' },   // เว้นว่าง = "สอบถามราคา"
+  price: { pro: '299', proNote: 'ซื้อขาด จ่ายครั้งเดียว · 1 รหัส = 1 กิจการ (1 แอป + 1 ประเภทธุรกิจ ที่เลือกตอนซื้อ) ไม่ใช่ทุกแอป · ใช้แม่แบบตามที่เห็นในเดโม (ไม่รวมงานแก้)', ma: '', ultimate: '' },   // เว้นว่าง = "สอบถามราคา"
   /* แพ็กเกจปรับแต่ง (ซื้อเพิ่มจากโปร) · ตัวเลขชุดเดียวกับ PKGS / TK_* ใน mother/Code.gs */
   pkgs: [ { price: '699', n: 2, rounds: ['ครั้งที่ 1 ก่อนใช้งานจริง (เอาเมนูออก เพิ่มช่อง เปลี่ยนคำ)', 'ครั้งที่ 2 หลังลองใช้งานจริง (ปรับจุดที่ใช้แล้วติด)'] },
           { price: '1,200', n: 4, best: 1, rounds: ['ก่อนใช้งานจริง และหลังลองใช้งานจริง', 'อีก 2 ครั้ง ใช้เมื่อไรก็ได้', 'เฉลี่ยครั้งละ 300 บาท'] } ],
   sla: { hours: 3, points: 5, days: 3 },
-  termsV: '2569-11-14',                        // ต้องตรงกับ TERMS_V ใน mother/Code.gs
+  termsV: '2569-11-14b',                        // ต้องตรงกับ TERMS_V ใน mother/Code.gs
   pay: { pp: '0840794393', name: 'ภูวดล อสุระพงษ์', bank: 'ธนาคารไทยพาณิชย์ 429-1-58314-0' },   // พร้อมเพย์ในหน้าซื้อโปร (แสดงเป็น QR ไม่พิมพ์เบอร์)
   apps: [
     { id:'dorm', name:'แอปหอพัก / ให้เช่ารายเดือน', for:'หอพัก แมนชั่น คอนโด บ้านเช่า ตลาด สำนักงานให้เช่า', status:'live', icon:'home', grad:'g1', cta:'ขอติดตั้งให้หอของฉัน',
@@ -594,7 +594,7 @@ function plans(){const a=live.find(x=>x.id===planApp)||live[0];
     <div class="lim">${a.pro.lim.map(x=>`<span>${esc(x)}</span>`).join('')}</div>
     <p class="fitnote">${icon('spark','')}ทำงานบน Google Sheets ของร้าน ใช้งานลื่นในขนาดที่แนะนำ ใหญ่กว่านี้หรือหลายสาขา แนะนำแพ็กเกจอัลติเมต <a href="#faq" data-faq="size">อ่านเพิ่ม</a></p>
     <ul>${a.pro.has.map(t=>L(1,t)).join('')}${L(1,'ติดตั้งเองได้ใน 5 ขั้น มีคู่มือรูปประกอบ')}${L(1,'อยากปรับให้ตรงร้าน เพิ่มแพ็กเกจปรับแต่งได้')}</ul>
-    <a class="btn" href="?pay=${esc(a.id)}">ซื้อโปร (แนบสลิป รับรหัสเอง)</a></article>
+    <a class="btn" href="?pay=${esc(a.id)}">ซื้อโปร ${esc(a.name.split(' / ')[0].replace('แอป',''))} · 1 กิจการ</a></article>
   <article class="plan glass"><div><span class="badge b-soon">เร็ว ๆ นี้</span><h3 style="margin-top:8px">อัลติเมต</h3><p class="muted">สำหรับหลายสาขา ระบบบนคลาวด์</p></div><div class="price">${pr(C.price.ultimate,'บาท/เดือน')}</div>
     <ul>${L(1,'หลายสาขาในบัญชีเดียว')}${L(1,'แจ้งเตือนผ่าน LINE')}${L(1,'อัปเดตทันทีไม่ต้องรีเฟรช')}${L(1,'ระบบสำหรับคลินิก / โรงพยาบาล')}${L(1,'โลโก้และโดเมนของกิจการ')}</ul>
     <a class="btn btn-line" href="#brief" data-pick="${esc(a.id)}" data-wait="1">แจ้งเมื่อเปิดตัว</a></article>`;
@@ -817,7 +817,7 @@ const TERMS=[
  ['ผู้ให้บริการ','Asuraphong Apps ("เรา") ให้บริการแอปสำหรับธุรกิจขนาดเล็กที่ทำงานบน Google Sheets และ Google Apps Script ของผู้ใช้เอง ติดต่อ LINE '+C.line+' หรืออีเมล '+C.email],
  ['บัญชีสมาชิก','ผู้สมัครต้องให้ข้อมูลจริง ยืนยันอีเมล และเก็บรหัสผ่านเป็นความลับ 1 บัญชีใช้ได้ 1 คน เราอาจระงับบัญชีที่ใช้งานผิดวัตถุประสงค์'],
  ['สิทธิ์การใช้ฉบับฟรี','ดาวน์โหลดและใช้ฉบับฟรีในกิจการของตนเองได้โดยไม่มีค่าใช้จ่าย ภายใต้ข้อจำกัดของแพ็กเกจฟรี ห้ามนำไปขาย ให้เช่า หรืออ้างเป็นผลงานของตนเอง'],
- ['แพ็กเกจโปร','ซื้อขาดจ่ายครั้งเดียว 1 รหัสไลเซนส์ใช้ได้ 1 กิจการ (ผูกกับ Google Sheets ไฟล์แรกที่เปิดใช้) ได้รับแม่แบบตามที่แสดงในเดโม ไม่ล็อกจำนวนรายการ (ใช้งานลื่นในขนาดที่แนะนำ) ไม่รวมงานปรับแต่ง ห้ามเผยแพร่หรือแจกจ่ายโค้ดฉบับโปรและรหัสไลเซนส์'],
+ ['แพ็กเกจโปร','ซื้อขาดจ่ายครั้งเดียว 1 รหัสไลเซนส์ใช้ได้ 1 กิจการ (ผูกกับ Google Sheets ไฟล์แรกที่เปิดใช้) ผูกกับ 1 แอปและ 1 ประเภทธุรกิจที่เลือกตอนซื้อ (แอปจะล็อกประเภทนั้นไว้ หากเลือกผิดแจ้งเราเพื่อเปลี่ยนให้ภายใน 7 วัน) ไม่ได้รวมทุกแอป ได้รับแม่แบบตามที่แสดงในเดโม ไม่ล็อกจำนวนรายการ (ใช้งานลื่นในขนาดที่แนะนำ) ไม่รวมงานปรับแต่ง ห้ามเผยแพร่หรือแจกจ่ายโค้ดฉบับโปรและรหัสไลเซนส์'],
  ['ขนาดการใช้งานและระบบของ Google','แอปทำงานบน Google Sheets, Google Apps Script และ Google Drive ในบัญชีของผู้ใช้เอง ความเร็วและการทำงานขึ้นกับโควต้าและการให้บริการของ Google ซึ่งเราควบคุมไม่ได้ เช่น จำนวนคำสั่งที่ทำงานพร้อมกัน จำนวนอีเมลต่อวัน และขนาดข้อมูลในชีต แพ็กเกจโปรไม่ล็อกจำนวนรายการ แต่ออกแบบให้ใช้งานได้ลื่นในขนาดที่แนะนำบนเว็บไซต์ (เช่น หอพักไม่เกินประมาณ 200 ห้อง) หากกิจการใหญ่กว่านั้นอาจทำงานช้าลง ซึ่งไม่ถือว่าแอปใช้งานไม่ได้ตามเดโม เราไม่รับประกันว่าระบบจะทำงานได้ตลอดเวลาโดยไม่สะดุด (ไม่มีข้อตกลงระดับการให้บริการ / SLA)'],
  ['การชำระเงินและการคืนเงิน','ชำระผ่านพร้อมเพย์ / โอนเงิน และแนบสลิป เราจะตรวจสอบและส่งมอบภายใน 24 ชั่วโมง (ปกติ 17:00–21:00 น.) หากชำระแล้วแต่เรายังไม่ได้ส่งมอบรหัส ขอคืนเงินเต็มจำนวนได้ หลังส่งมอบรหัสและโค้ดแล้วงดคืนเงิน เว้นแต่แอปใช้งานไม่ได้ตามที่แสดงในเดโมและเราแก้ไขไม่ได้ภายใน 7 วัน'],
  ['แพ็กเกจปรับแต่ง','699 บาท แก้ได้ 2 ครั้ง / 1,200 บาท แก้ได้ 4 ครั้ง 1 ครั้ง = แก้ 1 รอบ ไม่เกิน 5 จุด เนื้องานไม่เกิน 3 ชั่วโมง งานที่ใหญ่กว่านี้ประเมินราคาแยก'],
@@ -894,10 +894,11 @@ async function vMe(next){
   if(next&&/^pay/.test(next))return go2(next);
   const ready={};r.free.forEach(f=>ready[f.app]=f.ready);
   page(`<div class="me-h"><div><span class="eyebrow">บัญชีของฉัน</span><h2>สวัสดีครับ ${esc(r.me.name||r.me.email)}</h2><div class="small muted">${esc(r.me.email)} · ${esc(r.me.phone)}</div></div><button class="btn btn-line" id="m-out">ออกจากระบบ</button></div>
-    <h3>ดาวน์โหลดแอปฉบับฟรี</h3><p class="small muted">กด "ดาวน์โหลดโค้ด" แล้วทำตามคู่มือติดตั้ง (ประมาณ 10 นาที ใช้คอมพิวเตอร์จะสะดวกที่สุด)</p>
+    <h3>ดาวน์โหลดแอปฉบับฟรี</h3><p class="small muted">ฉบับฟรีโหลดลองได้ทุกแอป กด "ดาวน์โหลดโค้ด" แล้วทำตามคู่มือติดตั้ง (ประมาณ 10 นาที ใช้คอมพิวเตอร์จะสะดวกที่สุด)</p>
+    <div class="alert a-info small"><b>แพ็กเกจโปร 299 บาท = 1 กิจการ</b> ไม่ใช่ทุกแอป · ตอนซื้อเลือก 1 แอป + 1 ประเภทธุรกิจ ใช้กับ Google Sheets ได้ 1 ไฟล์ · มีหลายกิจการต้องซื้อแยกกัน</div>
     <div class="dlg">${appLive().map(a=>`<article class="dl glass"><div class="app-h"><span class="app-ic ${a.grad}">${icon(a.icon,'')}</span><div><b>${esc(a.name)}</b><div class="small muted">${esc(a.for)}</div></div></div>
       <div class="acts">${ready[a.id]?`<button class="btn btn-acc" data-dl="${a.id}">${icon('open','')}ดาวน์โหลดโค้ด</button><button class="btn btn-line" data-cp="${a.id}">คัดลอกโค้ด</button>`:'<span class="small muted">กำลังเตรียมไฟล์</span>'}
-        <a class="btn btn-line" href="?install=${a.id}">คู่มือติดตั้ง</a><a class="btn btn-line" href="${esc(a.demo||'#')}" target="_blank" rel="noopener">ลองเดโม</a><a class="btn btn-line" href="?pay=${a.id}">ซื้อโปร ${esc(C.price.pro)}฿</a></div></article>`).join('')}</div>
+        <a class="btn btn-line" href="?install=${a.id}">คู่มือติดตั้ง</a><a class="btn btn-line" href="${esc(a.demo||'#')}" target="_blank" rel="noopener">ลองเดโม</a><a class="btn btn-line" href="?pay=${a.id}">ซื้อโปร ${esc(C.price.pro)}฿ · 1 กิจการ</a></div></article>`).join('')}</div>
     <h3>คำสั่งซื้อของฉัน</h3>${r.orders.length?`<div class="revl">${r.orders.map(o=>`<a class="rv olink" href="?o=${esc(o.tok)}"><div class="rv-h"><b>${esc(o.item)} · ${esc(o.appName)}</b><span class="rst ${o.status==='ยืนยันแล้ว'?'s2':o.status==='ไม่ผ่าน'?'s3':'s0'}">${esc(o.status)}</span></div><span class="small muted">${esc(o.id)} · ${dtTH(o.at)} · ${baht(o.amount)} บาท</span></a>`).join('')}</div>`:'<div class="small muted">ยังไม่มีคำสั่งซื้อ</div>'}
     <details><summary class="small">ตั้งค่าบัญชี</summary><div class="tform" style="margin-top:10px"><label class="consent"><input type="checkbox" id="m-mk" ${r.me.mkt?'checked':''}><span>รับข่าวสารและโปรโมชันทางอีเมล</span></label>
       <div class="acts"><button class="btn btn-line" data-doc="terms">ข้อตกลงการใช้งาน</button><button class="btn btn-line" data-doc="privacy">นโยบายความเป็นส่วนตัว</button></div>
@@ -920,6 +921,8 @@ async function vPay(app,item0){
   const items=[['pro','แพ็กเกจโปร (ซื้อขาด)',+String(C.price.pro).replace(/\D/g,'')],...C.pkgs.map((p,i)=>[i?'p4':'p2','แพ็กเกจปรับแต่ง '+p.n+' ครั้ง',+String(p.price).replace(/\D/g,'')])];
   page(`<span class="eyebrow">ซื้อแพ็กเกจ</span><h2>โอนเงิน แล้วแนบสลิป</h2><p class="small muted">แอดมินตรวจและส่งรหัสไลเซนส์ + โค้ดโปรให้ในหน้าติดตามคำสั่งซื้อ ภายใน 24 ชั่วโมง (ปกติ ${esc(C.hours)})</p>
     <form class="tform" id="pf" novalidate><div class="field"><span class="lab">1. แอป</span><div class="chips">${apps.map(a=>`<button type="button" class="chip pchip" data-a="${a.id}" aria-pressed="${a.id===app}">${esc(a.name)}</button>`).join('')}</div></div>
+      <div class="field" id="p-bzf"><span class="lab">ประเภทธุรกิจของคุณ <span class="opt">(เลือก 1 อย่าง)</span></span><div class="chips" id="p-bz"></div>
+        <div class="alert a-info small" style="margin-top:8px">แพ็กเกจโปร 299 บาท = <b>1 กิจการ</b> (1 แอป + 1 ประเภทธุรกิจ + 1 Google Sheets) แอปจะล็อกประเภทที่เลือกนี้ไว้ มีหลายกิจการต้องซื้อแยกกันครับ</div></div>
       <div class="field"><span class="lab">2. รายการ</span><div class="chips">${items.map(([k,l,p])=>`<button type="button" class="chip pchip" data-i="${k}" aria-pressed="${k===item}">${esc(l)} · ${baht(p)}฿</button>`).join('')}</div></div>
       <div class="paybox glass"><div><b>3. สแกนจ่าย</b><div class="small muted">ใช้แอปธนาคารใดก็ได้</div><div class="ppqr" id="p-qr"></div></div>
         <div class="small"><div class="ppamt" id="p-amt"></div><div>ชื่อบัญชี <b>${esc(C.pay.name)}</b></div><div>หรือโอนเข้า ${esc(C.pay.bank)}</div><div class="small muted" style="margin-top:6px">โอนตามยอดพอดี แล้วเก็บสลิปไว้</div></div></div>
@@ -930,15 +933,20 @@ async function vPay(app,item0){
       <label class="hp" aria-hidden="true">เว็บไซต์<input id="p-hp" tabindex="-1" autocomplete="off"></label><div id="p-err"></div><button class="btn btn-acc" type="submit">ส่งสลิป</button>
       <p class="small muted">ส่งสลิปทาง LINE ${esc(C.line)} แทนได้ แต่จะได้รหัสเร็วกว่าถ้าแนบที่หน้านี้</p></form>`);
   document.querySelectorAll('[data-doc]').forEach(b=>b.onclick=()=>showDoc(b.dataset.doc));
-  const paint=()=>{const it=items.find(x=>x[0]===item);$('#p-amt').innerHTML=`ยอดโอน <b>${baht(it[2])}</b> บาท<div class="small muted">${esc(it[1])} · ${esc((apps.find(a=>a.id===app)||{}).name||'')}</div>`;
+  let biz='';const cfg=()=>C.apps.find(a=>a.id===app)||{};
+  const paintBz=()=>{const T=cfg().types||[];if(!T.some(t=>t[0]===biz))biz='';$('#p-bzf').hidden=item!=='pro';
+    $('#p-bz').innerHTML=T.map(([k,l])=>`<button type="button" class="chip pchip" data-bz="${k}" aria-pressed="${k===biz}">${esc(l)}</button>`).join('');
+    document.querySelectorAll('[data-bz]').forEach(b=>b.onclick=()=>{biz=b.dataset.bz;document.querySelectorAll('[data-bz]').forEach(x=>x.setAttribute('aria-pressed',x===b));paint()})};
+  const paint=()=>{const it=items.find(x=>x[0]===item);$('#p-amt').innerHTML=`ยอดโอน <b>${baht(it[2])}</b> บาท<div class="small muted">${esc(it[1])} · ${esc((apps.find(a=>a.id===app)||{}).name||'')}${item==='pro'&&biz?' · '+esc(((cfg().types||[]).find(t=>t[0]===biz)||[])[1]||''):''}</div>`;
     qrSvg2(ppQR(it[2])).then(s=>{$('#p-qr').innerHTML=s}).catch(()=>{$('#p-qr').innerHTML='<div class="small muted">โหลด QR ไม่ได้ โอนเข้าบัญชีด้านขวาแทนได้</div>'})};
-  document.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{app=b.dataset.a;document.querySelectorAll('[data-a]').forEach(x=>x.setAttribute('aria-pressed',x===b));paint()});
-  document.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{item=b.dataset.i;document.querySelectorAll('[data-i]').forEach(x=>x.setAttribute('aria-pressed',x===b));paint()});paint();
+  document.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{app=b.dataset.a;document.querySelectorAll('[data-a]').forEach(x=>x.setAttribute('aria-pressed',x===b));paintBz();paint()});
+  document.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{item=b.dataset.i;document.querySelectorAll('[data-i]').forEach(x=>x.setAttribute('aria-pressed',x===b));paintBz();paint()});paintBz();paint();
   $('#p-sl').onchange=async()=>{const f=$('#p-sl').files[0];if(!f)return;try{slip=await shrink(f,1400,.82);$('#p-im').src=slip;$('#p-im').hidden=false;$('#p-slt').textContent='เปลี่ยนรูป'}catch(e){toast('เปิดรูปไม่ได้ ลองรูปอื่น')}};
   $('#pf').onsubmit=async e=>{e.preventDefault();const b=e.target.querySelector('[type=submit]');
+    if(item==='pro'&&!biz){$('#p-err').innerHTML=errA('เลือกประเภทธุรกิจของคุณก่อน (1 รหัสใช้ได้ 1 กิจการ)');$('#p-bzf').scrollIntoView({block:'center'});return}
     if(!slip){$('#p-err').innerHTML=errA('แนบรูปสลิปก่อน');return}if(!$('#p-ok').checked){$('#p-err').innerHTML=errA('กดยินยอมก่อนส่ง');return}
     bindBusy(b,true,'กำลังส่งสลิป…');
-    try{const r=await leadCall('pubOrder',[{mtok:mtok(),app:app,item:item,org:$('#p-org').value,name:$('#p-nm').value,contact:$('#p-ct').value,slip:slip,consent:true,hp:$('#p-hp').value}]);go2('o='+r.tok)}
+    try{const r=await leadCall('pubOrder',[{mtok:mtok(),app:app,item:item,biz:item==='pro'?biz:'',org:$('#p-org').value,name:$('#p-nm').value,contact:$('#p-ct').value,slip:slip,consent:true,hp:$('#p-hp').value}]);go2('o='+r.tok)}
     catch(x){$('#p-err').innerHTML=errA(x.message);bindBusy(b,false)}};
 }
 function shrink(file,max,q){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement('canvas');
@@ -955,7 +963,7 @@ async function vOrder(tk){
   let v;try{v=await leadCall('pubOrderView',[tk])}catch(e){page(errA(e.message));return}
   const ok=v.status==='ยืนยันแล้ว',no=v.status==='ไม่ผ่าน',ap=AP[v.app]||{};
   const st=[['ส่งสลิปแล้ว',1],['แอดมินตรวจยอด',ok||no?1:0],[no?'ไม่ผ่าน':'ยืนยันแล้ว · ส่งมอบ',ok||no?1:0]];
-  page(`<div class="small muted">คำสั่งซื้อ <b class="mono">${esc(v.id)}</b> · ${dtTH(v.at)}</div><h2>${esc(v.itemName)}</h2><div class="muted">${esc(v.appName)} · ${esc(v.org)} · ${baht(v.amount)} บาท</div>
+  page(`<div class="small muted">คำสั่งซื้อ <b class="mono">${esc(v.id)}</b> · ${dtTH(v.at)}</div><h2>${esc(v.itemName)}</h2><div class="muted">${esc(v.appName)}${v.bizName?' · '+esc(v.bizName):''} · ${esc(v.org)} · ${baht(v.amount)} บาท</div>${v.pro||v.item==='pro'?'<div class="small muted">1 รหัส = 1 กิจการ · แอปจะล็อกประเภทธุรกิจนี้ไว้</div>':''}
     <ol class="tprog o3">${st.map(([l,on],i)=>`<li class="${on?'on':''}${!on&&st[i-1]&&st[i-1][1]?' cur':''}">${esc(l)}</li>`).join('')}</ol>
     ${!ok&&!no?`<div class="nowst"><span class="small">สถานะตอนนี้</span><b>รอแอดมินตรวจสลิป</b><span>ปกติไม่เกิน 24 ชั่วโมง (${esc(C.hours)}) หน้านี้รีเฟรชเองทุก 1 นาที หรือกดบันทึกลิงก์ไว้กลับมาดูทีหลัง</span></div>
       <div class="acts"><button class="btn btn-line" id="o-cp">คัดลอกลิงก์หน้านี้</button><a class="btn btn-ok" href="https://line.me/R/oaMessage/${encodeURIComponent(C.line)}/?${encodeURIComponent('สวัสดีครับ ส่งสลิปคำสั่งซื้อ '+v.id+' แล้วครับ')}" target="_blank" rel="noopener">${icon('chat','')}ทัก LINE แจ้งแอดมิน</a></div>`:''}
@@ -1021,6 +1029,7 @@ $('#faq-list').innerHTML=[['ข้อมูลของร้านเก็บ�
   ['ต้องลงแอปจาก Play Store / App Store ไหม','ไม่ต้อง เปิดผ่านลิงก์ใน Chrome, Safari หรือ Edge ได้เลย และกด "เพิ่มไปยังหน้าจอโฮม" ให้มีไอคอนเหมือนแอป'],
   ['โปร '+C.price.pro+' บาท แก้ให้ตรงร้านด้วยไหม','โปรคือแม่แบบตามที่เห็นในเดโม ปลดล็อกทุกเมนู ไม่รวมงานแก้ ถ้าอยากปรับให้ตรงกับร้าน เลือกแพ็กเกจปรับแต่ง '+C.pkgs.map(p=>p.price+' บาท ('+p.n+' ครั้ง)').join(' หรือ ')],
   ['ticket งานแก้คืออะไร','1 ticket คือการแก้ 1 รอบ รวบรวมจุดที่อยากแก้ส่งมาทีเดียว ไม่เกิน '+C.sla.points+' จุด เนื้องานไม่เกิน '+C.sla.hours+' ชม. เราส่งให้ตรวจภายใน '+C.sla.days+' วันหลังรับเรื่อง ถ้ายังไม่ตรงขอแก้ต่อในรอบเดิมได้ ดูสถานะทุกขั้นได้ในหน้าติดตามงาน'],
+  ['จ่าย 299 บาท ได้ทุกแอปไหม','ไม่ใช่ครับ แพ็กเกจโปร 299 บาท = 1 กิจการ คือ 1 แอป + 1 ประเภทธุรกิจที่เลือกตอนซื้อ (เช่น แอปนัดคิว · ร้านทำผม) ใช้กับ Google Sheets ได้ 1 ไฟล์ แอปจะล็อกประเภทนั้นไว้ ถ้ามีหลายกิจการ หรือหลายสาขาแยกชีต ต้องซื้อแยกกัน ส่วนฉบับฟรีโหลดลองได้ทุกแอป','one'],
   ['แอปรองรับกิจการใหญ่แค่ไหน','ทุกแอปทำงานบน Google Sheets และ Google Apps Script ของร้านเอง (ฟรี ไม่มีค่าเซิร์ฟเวอร์) จึงมีขีดจำกัดของ Google เช่น รองรับคำสั่งพร้อมกันประมาณ 30 คำสั่ง และชีตจะเริ่มช้าเมื่อข้อมูลสะสมหลายหมื่นแถว แพ็กเกจโปรไม่ล็อกจำนวน แต่ใช้งานลื่นที่สุดเมื่อไม่เกินขนาดแนะนำ: หอพัก ~200 ห้อง · ที่พักรายวัน ~60 ห้อง · ร้านค้า ~5,000 สินค้า และ ~300 บิล/วัน · ร้านซ่อม ~600 งาน/เดือน · นัดคิว ~80 นัด/วัน · ร้านอาหาร ~30 โต๊ะ และ ~400 บิล/วัน ใหญ่กว่านี้หรือมีหลายสาขา แนะนำแพ็กเกจอัลติเมต (ระบบบนคลาวด์ กำลังเปิดตัว)','size'],
   ['พนักงานไม่ค่อยถนัดมือถือ ใช้ได้ไหม','ปุ่มใหญ่ ขยายตัวหนังสือได้ 3 ระดับ แต่ละตำแหน่งเห็นเฉพาะเมนูของตัวเอง ในแอปมีผู้ช่วย "น้องอาสา" พาทำทีละขั้น และคู่มือรูปประกอบ'],
   ['ติดตั้งยากไหม','ไม่ยาก สมัครสมาชิก ดาวน์โหลดโค้ด แล้วทำตามคู่มือ 8 ขั้นที่มีรูปประกอบ ประมาณ 10 นาที ทำครั้งเดียว'],
