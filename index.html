@@ -5,15 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Asuraphong Apps · แอปจัดการหอพัก ร้านอาหาร ร้านค้า บนมือถือ ใช้ฟรีได้</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="แอปสำเร็จรูปสำหรับธุรกิจเล็ก 8 ประเภท: หอพัก ตลาด / แผงค้า สำนักงานให้เช่า ที่พักรายวัน ร้านอาหาร ร้านค้า / สต็อก ร้านซ่อม และร้านนัดคิว ใช้ได้ทั้งมือถือและคอมพิวเตอร์ เริ่มใช้ฟรี ฉบับโปรซื้อขาด ไม่มีรายเดือน ข้อมูลอยู่ใน Google ของคุณเอง">
+<meta name="description" content="แอปสำเร็จรูปสำหรับธุรกิจเล็ก 8 ประเภท: หอพัก ตลาด / แผงค้า สำนักงานให้เช่า ที่พักรายวัน ร้านอาหาร ร้านค้า / สต็อก ร้านซ่อม และร้านนัดคิว ใช้ได้ทั้งมือถือและคอมพิวเตอร์ ใช้ฟรีครบทุกเมนู ไม่ต้องใช้รหัส ไม่มีรายเดือน ข้อมูลอยู่ใน Google ของคุณเอง">
 <link rel="canonical" href="https://asuraphongapps54-prog.github.io/">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="application-name" content="Asuraphong Apps">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Asuraphong Apps","alternateName":"อสุระพงษ์ แอปส์","url":"https://asuraphongapps54-prog.github.io/"},{"@type":"Organization","name":"Asuraphong Apps","url":"https://asuraphongapps54-prog.github.io/","logo":"https://asuraphongapps54-prog.github.io/icon-512.png"}]}</script>
 <meta name="theme-color" content="#0f766e">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Asuraphong Apps">
 <meta property="og:locale" content="th_TH">
 <meta property="og:url" content="https://asuraphongapps54-prog.github.io/">
 <meta property="og:title" content="แอปจัดการธุรกิจสำเร็จรูป 8 ประเภท · ใช้ฟรีได้ · Asuraphong Apps">
-<meta property="og:description" content="หอพัก ตลาด สำนักงานให้เช่า ที่พักรายวัน ร้านอาหาร ร้านค้า ร้านซ่อม นัดคิว ใช้บนมือถือและคอม ฉบับโปรซื้อขาด ไม่มีรายเดือน">
+<meta property="og:description" content="หอพัก ตลาด สำนักงานให้เช่า ที่พักรายวัน ร้านอาหาร ร้านค้า ร้านซ่อม นัดคิว ใช้บนมือถือและคอม ใช้ฟรีครบทุกเมนู ไม่มีรายเดือน">
 <meta property="og:image" content="https://asuraphongapps54-prog.github.io/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -196,7 +201,7 @@ section{padding-block:72px}
 .ptab{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);background:var(--glass);color:var(--ink);border-radius:99px;padding:8px 16px;font:600 .95rem var(--f-head);cursor:pointer}
 .ptab svg{width:18px;height:18px}.ptab[aria-selected=true]{border-color:transparent;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;box-shadow:0 8px 20px color-mix(in srgb,var(--acc) 30%,transparent)}
 .ptypes{padding:12px 16px;border-radius:16px;margin:-6px 0 18px;display:grid;gap:8px}.ptypes .feat{margin:0}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,460px));justify-content:center;gap:16px;align-items:stretch}
 .plan{display:flex;flex-direction:column;gap:16px;padding:26px;min-width:0}
 .plan.pro{background:linear-gradient(160deg,color-mix(in srgb,var(--acc) 92%,#000),color-mix(in srgb,var(--acc2) 92%,#000));color:#fff;border-color:transparent;transform:translateY(-8px)}
 .plan.pro .muted,.plan.pro li{color:rgba(255,255,255,.9)}
@@ -216,7 +221,8 @@ section{padding-block:72px}
 /* แพ็กเกจปรับแต่ง (ticket) */
 .cust{margin-top:28px;padding:28px;display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:start}
 .cust h3{font-size:1.4rem}.cust>div{display:flex;flex-direction:column;gap:14px;min-width:0}
-.pk{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pk{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.utier{display:grid;gap:4px;font-size:.88rem;margin:0}.utier div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding:3px 0}.utier b{white-space:nowrap}
 .pkc{border-radius:18px;padding:18px;background:var(--solid);border:1.5px solid var(--line);display:flex;flex-direction:column;gap:8px;min-width:0;position:relative}
 .pkc.best{border-color:var(--acc);box-shadow:0 0 0 4px color-mix(in srgb,var(--acc) 14%,transparent)}
 .pkc .price{font-size:2rem}.pkc .tix{display:flex;gap:6px}.pkc .tix i{width:30px;height:20px;border-radius:6px;background:linear-gradient(135deg,var(--acc),var(--acc2));-webkit-mask:radial-gradient(circle 4px at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 4px at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat;mask:radial-gradient(circle 4px at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 4px at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat}
@@ -333,7 +339,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 @keyframes bob{50%{transform:translateY(-8px)}}
 @keyframes draw{to{stroke-dashoffset:0}}
 
-/* ===== บัญชีสมาชิก · ซื้อโปร · คู่มือติดตั้ง ===== */
+/* ===== บัญชีสมาชิก · ซื้อรอบปรับแต่ง · คู่มือติดตั้ง ===== */
 .tpanel.wide{max-width:900px}
 .legal{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:10px}.legal div{color:var(--muted);font-size:.93rem}
 .lmodal{position:fixed;inset:0;z-index:60;background:rgba(20,22,50,.45);display:grid;place-items:center;padding:16px}
@@ -433,7 +439,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
   </div></section>
 
   <section id="brief"><div class="wrap">
-    <div class="sec-head"><span class="eyebrow">สั่งทำตามบรีฟ</span><h2>ธุรกิจของคุณยังไม่มีแม่แบบ?</h2><p class="muted">แอปที่มีแม่แบบแล้ว <b>ดาวน์โหลดใช้ฟรีได้เลย ไม่ต้องส่งบรีฟ</b> · ส่งบรีฟได้เมื่อธุรกิจของคุณยังไม่มีแม่แบบ หรือเป็นลูกค้าโปรที่อยากสั่งทำเพิ่ม หรือทักเล่าทาง LINE OA ก็ได้</p>
+    <div class="sec-head"><span class="eyebrow">สั่งทำตามบรีฟ</span><h2>ธุรกิจของคุณยังไม่มีแม่แบบ?</h2><p class="muted">แอปที่มีแม่แบบแล้ว <b>ดาวน์โหลดใช้ฟรีได้เลย ไม่ต้องส่งบรีฟ</b> · ส่งบรีฟได้เมื่อธุรกิจของคุณยังไม่มีแม่แบบ หรือใช้แอปอยู่แล้วและอยากสั่งทำเพิ่ม หรือทักเล่าทาง LINE OA ก็ได้</p>
       <div class="cta"><a class="btn btn-acc" href="?acc">ดาวน์โหลดแอปฟรี</a><a class="btn btn-ok" id="brief-line" target="_blank" rel="noopener">ส่งบรีฟทาง LINE OA</a></div></div>
     <div class="brief">
       <div class="steps" id="steps"></div>
@@ -451,7 +457,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
         <div class="field"><label for="b-contact">LINE ID หรือเบอร์โทร</label><input id="b-contact" autocomplete="tel" placeholder="เช่น 0812345678 หรือ @shopline"></div>
         <label class="hp" aria-hidden="true">เว็บไซต์<input id="b-hp" tabindex="-1" autocomplete="off"></label>
         <label class="consent" for="b-ok"><input type="checkbox" id="b-ok"><span>ยินยอมให้เก็บชื่อและช่องทางติดต่อ เพื่อติดต่อกลับเรื่องบรีฟนี้เท่านั้น ไม่ส่งต่อบุคคลอื่น ขอลบได้ทุกเมื่อ</span></label>
-        <label class="consent" for="b-pro"><input type="checkbox" id="b-pro"><span>ฉันเป็นลูกค้าโปรแล้ว (มีรหัสไลเซนส์) และอยากสั่งทำเพิ่ม</span></label>
+        <label class="consent" for="b-pro"><input type="checkbox" id="b-pro"><span>ฉันใช้แอปอยู่แล้ว และอยากสั่งทำเพิ่ม</span></label>
         <div id="b-msg"></div>
         <button class="btn btn-acc" type="submit" id="b-send">ส่งบรีฟ</button>
         <p class="small muted" style="margin:0">ส่งบรีฟไปแล้ว? <a href="#track" data-trk>ดูสถานะบรีฟของคุณ</a></p>
@@ -486,13 +492,15 @@ const CONFIG = {
   leadApi: 'https://script.google.com/macros/s/AKfycbzYIz390j9N45Jj2NKoErYEN1di8MX3vv4z93281B-AMYNv-Y4QckFABrcl8IGkSgU-/exec',                                // ลิงก์ /exec ของยานแม่ (เว้นว่าง = ให้ลูกค้าคัดลอกบรีฟส่ง LINE)
   briefDays: 7,                               // ส่งเดโมให้ลองภายในกี่วัน
   ultimateDemo: 'https://asuraphongapps54-prog.github.io/dorm-cloud/?demo=1',   // แพ็กเกจอัลติเมต (repo dorm-cloud)
-  price: { pro: '299', proNote: 'ซื้อขาด จ่ายครั้งเดียว · 1 รหัส = 1 กิจการ (1 แอป + 1 ประเภทธุรกิจ ที่เลือกตอนซื้อ) ไม่ใช่ทุกแอป · ใช้แม่แบบตามที่เห็นในเดโม (ไม่รวมงานแก้)', ma: '', ultimate: '' },   // เว้นว่าง = "สอบถามราคา"
-  /* แพ็กเกจปรับแต่ง (ซื้อเพิ่มจากโปร) · ตัวเลขชุดเดียวกับ PKGS / TK_* ใน mother/Code.gs */
-  pkgs: [ { price: '699', n: 2, rounds: ['ครั้งที่ 1 ก่อนใช้งานจริง (เอาเมนูออก เพิ่มช่อง เปลี่ยนคำ)', 'ครั้งที่ 2 หลังลองใช้งานจริง (ปรับจุดที่ใช้แล้วติด)'] },
-          { price: '1,200', n: 4, best: 1, rounds: ['ก่อนใช้งานจริง และหลังลองใช้งานจริง', 'อีก 2 ครั้ง ใช้เมื่อไรก็ได้', 'เฉลี่ยครั้งละ 300 บาท'] } ],
+  price: { pro: '0', proNote: 'สมัครสมาชิกแล้วดาวน์โหลดได้ทุกแอป · ใช้ตามแม่แบบในเดโม · อยากปรับให้ตรงร้าน ซื้อรอบปรับแต่งแยก', ma: '',   // 16 พ.ย. 2569: แอป Google Sheets ฉบับเต็มฟรี
+    ultimate: '589', ultimateSetup: '1,999',          // อัลติเมต: ค่าไลเซนส์ครั้งเดียว + ค่าดูแลเซิร์ฟเวอร์และคลาวด์รายเดือน (ไม่เกิน 100 ห้อง)
+    ultimateTiers: [['ไม่เกิน 100 ห้อง', '589'], ['101–300 ห้อง', '990'], ['301–500 ห้อง', '1,490'], ['เกิน 500 ห้อง หรือหลายสาขา', '']] },   // '' = สอบถามราคา
+  /* รอบปรับแต่ง · ตัวเลขชุดเดียวกับ PKGS / TK_* ใน mother/Code.gs (id ต้องตรงกัน) · lic = ได้รหัสโปรด้วย */
+  pkgs: [ { id: 'r1', title: 'ปรับแต่ง 1 รอบ', price: '350', n: 1, rounds: ['แก้ได้ไม่เกิน 5 จุด', 'เช่น เอาเมนูออก เพิ่มช่อง เปลี่ยนคำ หัวใบเสร็จ'] },
+          { id: 'r2', title: 'ปรับแต่ง 2 รอบ', price: '550', n: 2, best: 1, rounds: ['ก่อนใช้งานจริง + หลังลองใช้จริง', 'เฉลี่ยรอบละ 275 บาท'] } ],
   sla: { hours: 3, points: 5, days: 3 },
-  termsV: '2569-11-14b',                        // ต้องตรงกับ TERMS_V ใน mother/Code.gs
-  pay: { pp: '0840794393', name: 'ภูวดล อสุระพงษ์', bank: 'ธนาคารไทยพาณิชย์ 429-1-58314-0' },   // พร้อมเพย์ในหน้าซื้อโปร (แสดงเป็น QR ไม่พิมพ์เบอร์)
+  termsV: '2569-11-16b',                        // ต้องตรงกับ TERMS_V ใน mother/Code.gs
+  pay: { pp: '0840794393', name: 'ภูวดล อสุระพงษ์', bank: 'ธนาคารไทยพาณิชย์ 429-1-58314-0' },   // พร้อมเพย์ในหน้าซื้อ (แสดงเป็น QR ไม่พิมพ์เบอร์)
   apps: [
     { id:'dorm', name:'แอปหอพัก / ให้เช่ารายเดือน', for:'หอพัก แมนชั่น คอนโด บ้านเช่า ที่พักคนงาน', status:'live', icon:'home', grad:'g1', cta:'ขอติดตั้งให้หอของฉัน',
       desc:'ผู้จัดการ พนักงาน และผู้เช่า ใช้แอปเดียวกัน ผู้เช่าดูบิลและส่งสลิปได้เอง คำเรียก (ห้อง / หลัง) และหมวดต่าง ๆ เปลี่ยนตามกิจการ',
@@ -503,31 +511,31 @@ const CONFIG = {
       pro:{lim:['ไม่ล็อกจำนวนห้อง / พนักงาน','เหมาะกับหอ ไม่เกิน ~200 ห้อง'],has:['หลายตึก หลายประเภทห้อง','บันทึกผู้มาติดต่อ คิดค่าจอดอัตโนมัติ','รปภ. ค้นทะเบียนรถ ถ่ายรูปจุดตรวจ','แชตผู้เช่า เช็กลิสต์ทุกตำแหน่ง','การ์ดรายรับ 6 เดือน สรุปทางอีเมลทุกเช้า']} },
     { id:'food', name:'แอปร้านอาหาร', for:'ร้านอาหารตามสั่ง ก๋วยเตี๋ยว คาเฟ่ ชาบู หมูกระทะ ร้านนั่งชิล ฟู้ดทรัค', status:'live', icon:'food', grad:'g3',
       desc:'เปิดโต๊ะ รับออเดอร์จากมือถือ ส่งเข้าหน้าจอครัวทันที ครัวกดเริ่มทำ / เสร็จ พนักงานเห็นว่าโต๊ะไหนพร้อมเสิร์ฟ คิดเงิน ทอนเงิน ใบเสร็จ สั่งกลับบ้านได้เลขคิว',
-      demo:'https://asuraphongapps54-prog.github.io/food/demo.html', feats:['บุฟเฟต์คิดต่อหัว จับเวลาโต๊ะ','คาเฟ่: รับออเดอร์ ได้เลขคิว เรียกคิว','แยกจ่าย หารบิล ปิดยอดประจำวัน','ผังโต๊ะ เปิดโต๊ะ สั่งจากมือถือ','หน้าจอครัว อัปเดตเอง มีเสียงเตือน','คิดเงิน ค่าบริการ เงินทอน ใบเสร็จ','กลับบ้าน / เดลิเวอรี ได้เลขคิว','โปร: ลูกค้าสแกน QR สั่งเองที่โต๊ะ ตัวเลือกเมนู รายงาน'],
+      demo:'https://asuraphongapps54-prog.github.io/food/demo.html', feats:['บุฟเฟต์คิดต่อหัว จับเวลาโต๊ะ','คาเฟ่: รับออเดอร์ ได้เลขคิว เรียกคิว','แยกจ่าย หารบิล ปิดยอดประจำวัน','ผังโต๊ะ เปิดโต๊ะ สั่งจากมือถือ','หน้าจอครัว อัปเดตเอง มีเสียงเตือน','คิดเงิน ค่าบริการ เงินทอน ใบเสร็จ','กลับบ้าน / เดลิเวอรี ได้เลขคิว','ลูกค้าสแกน QR สั่งเองที่โต๊ะ ตัวเลือกเมนู รายงาน'],
       types:[['thai','อาหารตามสั่ง'],['noodle','ก๋วยเตี๋ยว'],['cafe','คาเฟ่'],['shabu','ชาบู / หมูกระทะ (บุฟเฟต์)'],['bar','ร้านนั่งชิล'],['street','ฟู้ดทรัค / ริมทาง'],['family','ร้านอาหารครอบครัว']],
       free:{lim:['8 โต๊ะ · 80 เมนู','ผู้ใช้ 3 คน'],has:['ผังโต๊ะ รับออเดอร์ ส่งครัว','หน้าจอครัว (ครัว / บาร์)','คิดเงิน ใบเสร็จ A4 และม้วน','สั่งกลับบ้าน เลขคิว','ของหมดกดได้ทันที'],no:['ลูกค้าสแกน QR สั่งเอง ตัวเลือกเมนู']},
       pro:{lim:['ไม่ล็อกจำนวนโต๊ะ / เมนู / ผู้ใช้','เหมาะกับร้าน ไม่เกิน ~30 โต๊ะ · ~400 บิล/วัน'],has:['ลูกค้าสแกน QR ที่โต๊ะ สั่งเองได้','ตัวเลือกเมนู เผ็ด / หวาน / เพิ่มไข่ +10','QR พร้อมเพย์ใส่ยอดบิล','รายงานยอดขาย เมนูขายดี ช่วงเวลา CSV']} },
     { id:'repair', name:'แอปร้านซ่อม / รับงาน', for:'ร้านซ่อมมือถือ อู่รถ แอร์ เครื่องมือเกษตร ร้านแก้ผ้า นาฬิกา', status:'live', icon:'wrench', grad:'g2', cta:'ขอติดตั้งให้ร้านของฉัน',
       desc:'รับงานพร้อมถ่ายรูปสภาพ ช่างอัปเดตงาน ลูกค้าสแกน QR ดูสถานะเองได้ คำเรียก อาการเสีย และรายการเปลี่ยนตามประเภทร้าน',
-      demo:'https://asuraphongapps54-prog.github.io/repair/demo.html', feats:['ใบรับงานพร้อมรูปก่อนซ่อม','ลูกค้าสแกน QR เช็กสถานะเอง','ช่างอัปเดตงาน แจ้งค่าใช้จ่ายก่อนซ่อม','โปร: ใบเสนอราคาออนไลน์ สต็อกอะไหล่ ใบรับประกัน'],
+      demo:'https://asuraphongapps54-prog.github.io/repair/demo.html', feats:['ใบรับงานพร้อมรูปก่อนซ่อม','ลูกค้าสแกน QR เช็กสถานะเอง','ช่างอัปเดตงาน แจ้งค่าใช้จ่ายก่อนซ่อม','ใบเสนอราคาออนไลน์ สต็อกอะไหล่ ใบรับประกัน'],
       types:[['device','มือถือ / คอม'],['car','อู่รถยนต์'],['moto','มอเตอร์ไซค์'],['appliance','แอร์ / เครื่องใช้ไฟฟ้า'],['agri','เครื่องมือเกษตร'],['tailor','แก้ผ้า / รองเท้า'],['watch','นาฬิกา']],
       free:{lim:['60 งาน/เดือน','ผู้ใช้ 3 คน'],has:['ใบรับงานพร้อมรูปสภาพ','ช่างอัปเดตสถานะงาน','ลูกค้าสแกน QR ดูสถานะเอง','ใบรับงาน / ใบเสร็จ A4 และม้วน'],no:['ใบเสนอราคาให้ลูกค้ากดอนุมัติ']},
       pro:{lim:['ไม่ล็อกจำนวนงาน / ผู้ใช้','เหมาะกับร้าน ไม่เกิน ~600 งาน/เดือน'],has:['ใบเสนอราคาออนไลน์ ลูกค้ากดอนุมัติเอง','สต็อกอะไหล่ ตัดอัตโนมัติ','ใบรับประกัน + งานเคลม','รายงานรายรับ ค่าแรง ค่าอะไหล่','QR พร้อมเพย์ในลิงก์ลูกค้า']} },
     { id:'queue', name:'แอปนัดคิว', for:'ร้านทำผม ทำเล็บ สปา ฟิตเนส กวดวิชา อาบน้ำสัตว์ สตูดิโอ คาร์แคร์', status:'live', icon:'calendar', grad:'g4',
       desc:'ลงนัดตามเวลาว่างของช่างแต่ละคน (ไม่ชนกันอัตโนมัติ) รับคิวหน้าร้านได้เลขคิว จอเรียกคิว ลูกค้าเปิดลิงก์ดูว่ารออีกกี่คิว รับเงิน ใบเสร็จ',
-      demo:'https://asuraphongapps54-prog.github.io/queue/demo.html', feats:['เตือนนัดพรุ่งนี้ทาง LINE ทีละคน','ค่าคอมช่างรายคน มัดจำกันคนไม่มา','นัดตามเวลาว่าง ไม่ชนกัน','คิวหน้าร้าน + จอเรียกคิว','ลูกค้าดูคิวที่รอจากลิงก์','รับเงิน ใบเสร็จ A4 / ม้วน','โปร: จองออนไลน์เอง คอร์สหลายครั้ง รายงาน'],
+      demo:'https://asuraphongapps54-prog.github.io/queue/demo.html', feats:['เตือนนัดพรุ่งนี้ทาง LINE ทีละคน','ค่าคอมช่างรายคน มัดจำกันคนไม่มา','นัดตามเวลาว่าง ไม่ชนกัน','คิวหน้าร้าน + จอเรียกคิว','ลูกค้าดูคิวที่รอจากลิงก์','รับเงิน ใบเสร็จ A4 / ม้วน','จองออนไลน์เอง คอร์สหลายครั้ง รายงาน'],
       types:[['salon','ร้านทำผม'],['nail','ทำเล็บ'],['spa','สปา / นวด'],['fitness','ฟิตเนส'],['tutor','กวดวิชา / ดนตรี'],['pet','อาบน้ำสัตว์'],['studio','สตูดิโอ'],['carcare','คาร์แคร์ / ล้างรถ'],['service','ช่างนอกสถานที่']],
       free:{lim:['150 นัด/เดือน','ผู้ใช้ 3 คน'],has:['นัดตามเวลาว่างของแต่ละคน','คิวหน้าร้าน เลขคิว จอเรียกคิว','ลิงก์ให้ลูกค้าดูคิว','รับเงิน ใบเสร็จ'],no:['ลูกค้าจองออนไลน์เอง คอร์สหลายครั้ง']},
       pro:{lim:['ไม่ล็อกจำนวนนัด / ผู้ใช้','เหมาะกับร้าน ไม่เกิน ~80 นัด/วัน'],has:['ลิงก์ให้ลูกค้าจองเวลาว่างเอง','ขายคอร์ส / แพ็กเกจ ตัดครั้งอัตโนมัติ','QR พร้อมเพย์ใส่ยอด','รายงานรายได้ ต่อช่าง ช่วงเวลาที่ยุ่ง']} },
     { id:'stock', name:'แอปร้านค้า / สต็อก', for:'ร้านชำ มินิมาร์ท ร้านค้าปลีก ร้านวัสดุ เบเกอรี่ ร้านยา', status:'live', icon:'box', grad:'g1', cta:'ขอติดตั้งให้ร้านของฉัน',
       desc:'สแกนบาร์โค้ดขายหน้าร้าน ทอนเงิน พิมพ์ใบเสร็จ ตัดสต็อกอัตโนมัติ ปิดยอดทุกวัน หมวดสินค้าและหน่วยขายเปลี่ยนตามประเภทร้าน',
-      demo:'https://asuraphongapps54-prog.github.io/stock/demo.html', feats:['ใบสั่งของจากของใกล้หมด ส่ง LINE','นับสต็อกทั้งร้าน สรุปส่วนต่าง','ขายหน้าร้าน สแกนบาร์โค้ด ทอนเงิน','ใบเสร็จ A4 / ม้วน 80 / 58 มม.','เตือนของใกล้หมด ปิดยอดประจำวัน','โปร: เงินเชื่อ รายงานกำไร ป้ายราคา'],
+      demo:'https://asuraphongapps54-prog.github.io/stock/demo.html', feats:['ใบสั่งของจากของใกล้หมด ส่ง LINE','นับสต็อกทั้งร้าน สรุปส่วนต่าง','ขายหน้าร้าน สแกนบาร์โค้ด ทอนเงิน','ใบเสร็จ A4 / ม้วน 80 / 58 มม.','เตือนของใกล้หมด ปิดยอดประจำวัน','เงินเชื่อ รายงานกำไร ป้ายราคา'],
       types:[['mart','มินิมาร์ท / ร้านชำ'],['hardware','วัสดุก่อสร้าง'],['fashion','เสื้อผ้า'],['pet','สัตว์เลี้ยง'],['agri','ร้านเกษตร'],['pharmacy','ร้านยา (หน้าร้าน)'],['gift','ของขวัญ / ดอกไม้'],['bakery','เบเกอรี่ / ร้านขนม']],
       free:{lim:['สินค้า 1,000 รายการ','ผู้ใช้ 3 คน'],has:['ขายหน้าร้าน สแกนบาร์โค้ด ทอนเงิน','ใบเสร็จ A4 / 80 / 58 มม.','รับของเข้า ปรับสต็อก เตือนของใกล้หมด','สินค้าหลายแบบ (สี / ไซซ์) ปิดยอดประจำวัน'],no:['เงินเชื่อ รายงานกำไร ราคาส่ง']},
       pro:{lim:['ไม่ล็อกจำนวนสินค้า / ผู้ใช้','เหมาะกับร้าน ไม่เกิน ~5,000 สินค้า · ~300 บิล/วัน'],has:['ลูกค้าเงินเชื่อ ตั้งวงเงิน ข้อความทวง','รายงานกำไร ขายดี ของไม่ขยับ','ราคาส่ง หลายหน่วยขาย (ชิ้น / แพ็ก / ลัง)','ป้ายราคา + บาร์โค้ด เตือนของใกล้หมดอายุ','QR พร้อมเพย์ใส่ยอด']} },
     { id:'hotel', name:'แอปที่พักรายวัน / โรงแรม', for:'โรงแรม รีสอร์ท โฮมสเตย์ โฮสเทล พูลวิลล่า ลานกางเต็นท์', status:'live', icon:'home', grad:'g4', cta:'ขอติดตั้งให้ที่พักของฉัน',
       desc:'ผังห้องแบบปฏิทิน จองห้องพร้อมตรวจห้องว่าง รับมัดจำ เช็กอิน เช็กเอาต์ ออกใบเสร็จ แม่บ้านอัปเดตสถานะห้อง แขกเปิดลิงก์ดูการจองและยอดคงเหลือได้เอง',
-      demo:'https://asuraphongapps54-prog.github.io/hotel/demo.html', feats:['ปฏิทินห้องทั้งเดือน','ทะเบียนผู้พัก / ตม.30 แบบติ๊ก (ไม่เก็บเลขบัตร)','ผังห้องว่าง / มีแขก 2 สัปดาห์','จอง รับมัดจำ เช็กอิน-เอาต์','สถานะแม่บ้าน','ลิงก์ยืนยันการจองให้แขก','โปร: ราคาวันหยุด/เทศกาล รายงานอัตราเข้าพัก'],
+      demo:'https://asuraphongapps54-prog.github.io/hotel/demo.html', feats:['ปฏิทินห้องทั้งเดือน','ทะเบียนผู้พัก / ตม.30 แบบติ๊ก (ไม่เก็บเลขบัตร)','ผังห้องว่าง / มีแขก 2 สัปดาห์','จอง รับมัดจำ เช็กอิน-เอาต์','สถานะแม่บ้าน','ลิงก์ยืนยันการจองให้แขก','ราคาวันหยุด/เทศกาล รายงานอัตราเข้าพัก'],
       types:[['hotel','โรงแรม'],['resort','รีสอร์ท'],['homestay','โฮมสเตย์'],['hostel','โฮสเทล'],['villa','พูลวิลล่า'],['daily','ห้องพักรายวัน'],['camp','ลานกางเต็นท์']],
       free:{lim:['10 ห้อง','ผู้ใช้ 3 คน'],has:['ผังห้องแบบปฏิทิน ตรวจห้องว่าง','จอง มัดจำ เช็กอิน เช็กเอาต์ ใบเสร็จ','แม่บ้านอัปเดตห้อง','ลิงก์การจองให้แขก'],no:['ราคาวันหยุด / เทศกาล รายงาน']},
       pro:{lim:['ไม่ล็อกจำนวนห้อง / ผู้ใช้','เหมาะกับที่พัก ไม่เกิน ~60 ห้อง'],has:['ราคาศุกร์–เสาร์ และช่วงเทศกาลอัตโนมัติ','บริการเสริม อาหารเช้า เตียงเสริม รถรับส่ง','QR พร้อมเพย์ใส่ยอดมัดจำ / คงเหลือ','รายงานอัตราเข้าพัก ราคาเฉลี่ย ช่องทางจอง']} },
@@ -585,10 +593,10 @@ async function copyText(t,el){try{await navigator.clipboard.writeText(t);toast('
 const C=CONFIG,live=C.apps.filter(a=>a.status==='live'),soon=C.apps.filter(a=>a.status!=='live');
 $('#brand').textContent=C.brand;$('#logo').innerHTML=icon('logo','');
 $('#os').innerHTML=[['phone','Android'],['phone','iPhone · iOS'],['tablet','iPad · แท็บเล็ต'],['laptop','Windows · macOS'],['monitor','คอมพิวเตอร์ PC']].map(([i,t])=>`<span>${icon(i,'')}${t}</span>`).join('');
-$('#trust').innerHTML=[['shield','ข้อมูลอยู่ใน Google ของคุณ'],['check','เริ่มใช้ฟรี ไม่มีรายเดือน'],['spark','ไม่ต้องลงโปรแกรม']].map(([i,t])=>`<span>${icon(i)}${t}</span>`).join('');
+$('#trust').innerHTML=[['shield','ข้อมูลอยู่ใน Google ของคุณ'],['check','ใช้ฟรีครบทุกเมนู ไม่มีรายเดือน'],['spark','ไม่ต้องลงโปรแกรม']].map(([i,t])=>`<span>${icon(i)}${t}</span>`).join('');
 $('#fl1').innerHTML=icon('laptop')+'เปิดลิงก์เดียวกันทุกเครื่อง';$('#fl2').innerHTML=icon('check')+'ข้อมูลตรงกันทันที';
 const nTypes=live.reduce((s,a)=>s+(a.types||[]).length,0);
-$('#facts').innerHTML=[[live.length,'แอปพร้อมใช้งาน'],[nTypes,'ประเภทธุรกิจให้เลือก'],['0 บาท','เริ่มใช้แพ็กเกจฟรี'],['฿'+C.price.pro,'โปร จ่ายครั้งเดียว']].map(([b,s])=>`<div class="fact"><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join('');
+$('#facts').innerHTML=[[live.length,'แอปพร้อมใช้งาน'],[nTypes,'ประเภทธุรกิจให้เลือก'],['0 บาท','ใช้ฟรีครบทุกเมนู'],['ไม่ต้อง','ใช้รหัสปลดล็อก']].map(([b,s])=>`<div class="fact"><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join('');
 $('#dev-grid').innerHTML=[['phone','g1','มือถือ','Android และ iPhone ใช้ตอนเดินงาน สแกนบาร์โค้ด ถ่ายรูปหลักฐาน ตอบลูกค้า'],['tablet','g2','แท็บเล็ต / iPad','วางที่เคาน์เตอร์ ขายหน้าร้าน ดูผังห้อง จอใหญ่กดง่าย'],
   ['laptop','g3','โน้ตบุ๊ก','Windows หรือ macOS ดูรายงาน พิมพ์ใบเสร็จ ตั้งค่าร้าน'],['monitor','g4','คอมพิวเตอร์ PC','จอใหญ่แสดงหลายคอลัมน์ ต่อเครื่องพิมพ์ใบเสร็จและเครื่องสแกนบาร์โค้ดได้']]
   .map(([i,g,h,p])=>`<article class="dcard glass"><span class="di ${g}">${icon(i,'')}</span><h3>${h}</h3><p>${p}</p></article>`).join('');
@@ -607,7 +615,7 @@ $('#app-grid').innerHTML=live.map(a=>`<article class="app live glass">
     <div class="row"><a class="btn btn-line" href="#brief" data-pick="${esc(a.id)}" data-wait="1">${icon('bell','')}สนใจ แจ้งเมื่อพร้อม</a></div></article>`).join('')
   +`<article class="app add glass"><span class="badge b-brief">${icon('spark','')} ไม่มีประเภทที่ต้องการ</span><h3>ธุรกิจของคุณไม่อยู่ในรายการ?</h3><p class="muted">ส่งบรีฟมาได้ เราดัดแปลงจากเทมเพลตที่มีให้ตรงกับงานของร้านคุณ</p><a class="btn btn-acc" href="#brief" data-pick="other">ส่งบรีฟ</a></article>`;
 
-/* แพ็กเกจ: เลือกแอปแล้วแสดงฟรี / โปร ของแอปนั้น */
+/* แพ็กเกจ: เลือกแอปแล้วแสดงฉบับเต็ม (ฟรี) ของแอปนั้น + อัลติเมต */
 const pr=(v,u)=>v?`${esc(v)} <small>${u}</small>`:'สอบถามราคา';
 const L=(ok,t)=>`<li class="${ok?'':'no'}">${icon(ok?'check':'x','')}<span>${esc(t)}</span></li>`;
 let planApp=(live.find(a=>a.free)||{}).id;
@@ -615,39 +623,37 @@ function plans(){const a=live.find(x=>x.id===planApp)||live[0];
   $('#ptabs').innerHTML=live.filter(x=>x.free).map(x=>`<button class="ptab" role="tab" aria-selected="${x.id===a.id}" data-pa="${esc(x.id)}">${icon(x.icon,'')}${esc(x.name.split(' / ')[0])}</button>`).join('');
   document.querySelectorAll('[data-pa]').forEach(b=>b.onclick=()=>{planApp=b.dataset.pa;plans()});
   const ty=a.types||[];
-  $('#ptypes').innerHTML=ty.length?`<div class="small"><b>${esc(a.name.split(' / ')[0])} ใช้ได้กับ ${ty.length} ประเภทธุรกิจ</b> <span class="muted">· กดดูเดโมของแต่ละประเภทได้ · ซื้อโปรเลือกได้ 1 ประเภทต่อ 1 กิจการ</span></div>
+  $('#ptypes').innerHTML=ty.length?`<div class="small"><b>${esc(a.name.split(' / ')[0])} ใช้ได้กับ ${ty.length} ประเภทธุรกิจ</b> <span class="muted">· กดดูเดโมของแต่ละประเภทได้ · เปลี่ยนประเภทได้เองในหน้าตั้งค่า</span></div>
     <div class="feat">${ty.map(([k,l])=>a.demo?`<a class="tchip" href="${esc(a.demo)}?type=${esc(k)}" target="_blank" rel="noopener">${esc(l)}</a>`:`<span class="tchip">${esc(l)}</span>`).join('')}</div>`:'';
   $('#ptypes').hidden=!ty.length;
   $('#plan-grid').innerHTML=`
-  <article class="plan glass"><div><h3>ฟรี</h3><p class="muted">ใช้งานจริงได้ตลอด กับกิจการเล็ก</p></div><div class="price">0 <small>บาท ตลอดไป</small></div>
-    <div class="lim">${a.free.lim.map(x=>`<span>${esc(x)}</span>`).join('')}</div>
-    <ul>${a.free.has.map(t=>L(1,t)).join('')}${L(1,'ติดตั้งเองตามคู่มือ')}${a.free.no.map(t=>L(0,t)).join('')}</ul>
-    <a class="btn btn-line" href="?acc">สมัครและดาวน์โหลดฟรี</a></article>
-  <article class="plan glass pro"><div><span class="badge" style="background:rgba(255,255,255,.2);color:#fff">คุ้มที่สุด</span><h3 style="margin-top:8px">โปร</h3><p class="muted">ปลดล็อกทุกเมนูของแม่แบบ หน้าตาพรีเมียม</p></div>
-    <div class="price">${pr(C.price.pro,'บาท จ่ายครั้งเดียว')}</div><p class="muted" style="margin-top:-6px;font-size:.9rem">${esc(C.price.proNote)}</p>
+  <article class="plan glass pro"><div><span class="badge" style="background:rgba(255,255,255,.2);color:#fff">ใช้ฟรีทุกเมนู</span><h3 style="margin-top:8px">ฉบับเต็ม</h3><p class="muted">ทุกเมนูของแม่แบบ หน้าตาพรีเมียม ไม่ต้องใช้รหัส</p></div>
+    <div class="price">0 <small>บาท ไม่มีรายเดือน</small></div><p class="muted" style="margin-top:-6px;font-size:.9rem">${esc(C.price.proNote)}</p>
     <div class="lim">${a.pro.lim.map(x=>`<span>${esc(x)}</span>`).join('')}</div>
     <p class="fitnote">${icon('spark','')}ทำงานบน Google Sheets ของร้าน ใช้งานลื่นในขนาดที่แนะนำ ใหญ่กว่านี้หรือหลายสาขา แนะนำแพ็กเกจอัลติเมต <a href="#faq" data-faq="size">อ่านเพิ่ม</a></p>
-    <ul>${a.pro.has.map(t=>L(1,t)).join('')}${L(1,'ติดตั้งเองได้ใน 5 ขั้น มีคู่มือรูปประกอบ')}${L(1,'อยากปรับให้ตรงร้าน เพิ่มแพ็กเกจปรับแต่งได้')}</ul>
-    <a class="btn" href="?pay=${esc(a.id)}">ซื้อโปร ${esc(a.name.split(' / ')[0].replace('แอป',''))} · 1 กิจการ</a></article>
-  <article class="plan glass"><div><span class="badge b-live">ลองเดโมได้แล้ว</span><h3 style="margin-top:8px">อัลติเมต</h3><p class="muted">ระบบบนคลาวด์ สำหรับหลายสาขาและทีมงาน</p></div><div class="price">${pr(C.price.ultimate,'บาท/เดือน')}</div>
+    <ul>${a.free.has.concat(a.pro.has).map(t=>L(1,t)).join('')}${L(1,'ติดตั้งเองตามคู่มือรูปประกอบ')}${L(1,'อยากปรับให้ตรงร้าน ซื้อรอบปรับแต่งได้')}</ul>
+    <a class="btn" href="?acc">สมัครและดาวน์โหลดฟรี</a></article>
+  <article class="plan glass"><div><span class="badge b-live">ลองเดโมได้แล้ว</span><h3 style="margin-top:8px">อัลติเมต</h3><p class="muted">ระบบบนคลาวด์ สำหรับหลายสาขาและทีมงาน</p></div><div class="price">${pr(C.price.ultimate,'บาท/เดือน')}</div><p class="muted" style="margin-top:-6px;font-size:.9rem">+ ค่าไลเซนส์ ${esc(C.price.ultimateSetup)} บาท ครั้งเดียว · ค่าดูแลเซิร์ฟเวอร์และคลาวด์ตามขนาดหอ (ตอนนี้มีเฉพาะหอพัก)</p>
+    <div class="utier">${C.price.ultimateTiers.map(([k,v])=>`<div><span>${esc(k)}</span><b>${v?esc(v)+' บาท/เดือน':'สอบถามราคา'}</b></div>`).join('')}</div>
     <ul>${L(1,'หลายสาขาในบัญชีเดียว ดูภาพรวมทุกสาขา')}${L(1,'สลิปและแจ้งซ่อมเด้งเข้าจอทันทีทุกเครื่อง')}${L(1,'ผู้เช่ามีแอปของตัวเอง: จ่าย QR แนบสลิป แจ้งซ่อม รับแจ้งพัสดุ')}${L(1,'เชิญผู้เช่าด้วยลิงก์ใช้ครั้งเดียว ไม่มีรหัสห้องให้เดา')}${L(1,'ทะเบียนกุญแจดิจิทัล เตือนรีเซ็ตเมื่อเปลี่ยนผู้เช่า (ไม่เก็บรหัสประตู)')}${L(1,'สิทธิ์ทีมงานแยกบทบาท + บันทึกย้อนหลังทุกรายการ')}</ul>
-    <div style="display:grid;gap:8px"><a class="btn btn-acc" href="${esc(C.ultimateDemo)}" target="_blank" rel="noopener">ลองเดโมหอพักคลาวด์</a><a class="btn btn-line" href="#brief" data-pick="${esc(a.id)}" data-wait="1">สนใจ / สอบถามราคา</a></div></article>`;
+    <div style="display:grid;gap:8px"><a class="btn btn-acc" href="${esc(C.ultimateDemo)}" target="_blank" rel="noopener">ลองเดโมหอพักคลาวด์</a><a class="btn btn-line" href="#brief" data-pick="${esc(a.id)}" data-wait="1">สนใจ / สอบถาม</a></div></article>`;
   bindPick($('#plan-grid'))}
 /* แพ็กเกจปรับแต่ง = ticket แก้งาน */
 const S2=C.sla;
-$('#cust').innerHTML=`<div><span class="eyebrow">${icon('ticket','')} แพ็กเกจปรับแต่ง</span><h3>อยากให้ตรงกับร้านคุณ ซื้อเพิ่มเป็น ticket</h3>
-    <p class="muted">โปร ${esc(C.price.pro)} บาท คือแม่แบบตามที่เห็นในเดโม ถ้าอยากเอาเมนูออก เพิ่มช่อง เปลี่ยนคำเรียก หรือปรับใบเสร็จให้ตรงกับร้าน เลือกแพ็กเกจปรับแต่ง แล้วส่งรายการที่อยากแก้มาเป็นรอบ ๆ (1 รอบ = 1 ticket)</p>
+$('#cust').innerHTML=`<div><span class="eyebrow">${icon('ticket','')} แพ็กเกจปรับแต่ง</span><h3>อยากให้ตรงกับร้านคุณ ซื้อรอบปรับแต่ง</h3>
+    <p class="muted">แอปทุกตัวใช้ฟรีครบทุกเมนูตามที่เห็นในเดโม ถ้าอยากเอาเมนูออก เพิ่มช่อง เปลี่ยนคำเรียก หรือปรับใบเสร็จให้ตรงกับร้าน ซื้อรอบปรับแต่ง แล้วส่งรายการที่อยากแก้มาเป็นรอบ ๆ (1 รอบ = 1 ticket) ซื้อเพิ่มทีหลังได้</p>
     <div class="pk">${C.pkgs.map(p=>`<div class="pkc${p.best?' best':''}">${p.best?'<span class="badge b-live">คุ้มกว่า</span>':''}<div class="tix" aria-hidden="true">${'<i></i>'.repeat(p.n)}</div>
-      <div class="price">${esc(p.price)} <small>บาท</small></div><b>แก้ได้ ${p.n} ครั้ง (${p.n} ticket)</b><ul>${p.rounds.map(r=>`<li>${esc(r)}</li>`).join('')}</ul></div>`).join('')}</div>
-    <a class="btn btn-acc" href="?pay=${esc(planApp||'dorm')}&item=p2">ซื้อแพ็กเกจปรับแต่ง</a></div>
+      <b>${esc(p.title)}</b><div class="price">${esc(p.price)} <small>บาท</small></div><span class="small muted">แก้ได้ ${p.n} รอบ (${p.n} ticket)</span><ul>${p.rounds.map(r=>`<li>${esc(r)}</li>`).join('')}</ul></div>`).join('')}</div>
+    <div class="acts"><a class="btn btn-acc" href="?pay=${esc(planApp||'dorm')}&item=r2">ซื้อรอบปรับแต่ง</a></div></div>
   <div><h3 style="font-size:1.1rem">1 ticket ได้อะไรบ้าง</h3>
     <div class="rule"><div>${icon('list','')}<span><b>ไม่เกิน ${S2.points} จุดต่อรอบ</b>รวบรวมสิ่งที่อยากแก้ส่งมาทีเดียว เป็นข้อ ๆ</span></div>
       <div>${icon('clock','')}<span><b>เนื้องานไม่เกิน ${S2.hours} ชม.</b>เช่น เอาเมนูออก เพิ่มช่องกรอก เปลี่ยนคำ ปรับใบเสร็จ</span></div>
       <div>${icon('check','')}<span><b>ส่งให้ตรวจภายใน ${S2.days} วัน</b>นับจากวันที่เรารับเรื่อง แจ้งวันส่งให้เห็นในหน้าติดตาม</span></div>
       <div>${icon('spark','')}<span><b>ยังไม่ตรง ขอแก้ต่อได้</b>ในรอบเดิม ไม่เสีย ticket เพิ่ม</span></div></div>
+    <p class="small muted">แก้ทั้งหน้า ทั้งระบบ หรือเพิ่มเมนูใหม่ ไม่ใช้รอบปรับแต่ง เราประเมินราคาแยกให้ก่อนเริ่มเสมอ</p>
     <h3 style="font-size:1.1rem;margin-top:6px">ติดตามได้ทุกขั้น</h3>
     <ol class="flow"><li>ส่งรายการ<span>จากหน้าติดตาม</span></li><li>รับเรื่อง<span>แจ้งวันส่ง</span></li><li>กำลังแก้<span>ภายใน ${S2.days} วัน</span></li><li>ส่งให้ตรวจ<span>ลองใช้จริง</span></li><li>ปิดงาน<span>เมื่อคุณพอใจ</span></li></ol>
-    <p class="small muted">งานใหญ่กว่านี้ เช่น เพิ่มเมนูใหม่ทั้งหน้า หรือเชื่อมระบบอื่น เราประเมินราคาแยกให้ก่อนเริ่มเสมอ</p></div>`;/* ขั้นตอนสั่งทำ (เรียงตามลำดับจริง) */
+    </div>`;/* ขั้นตอนสั่งทำ (เรียงตามลำดับจริง) */
 $('#steps').innerHTML=[['ส่งบรีฟ','เล่างานของร้านในแบบฟอร์ม ใช้เวลา 3 นาที'],['เราตอบกลับทาง LINE','สรุปว่าเริ่มจากแม่แบบไหน เพิ่มอะไร ราคาเท่าไร ภายใน 1 วันทำการ'],
   ['ได้เดโมลองใช้ภายใน '+C.briefDays+' วัน','ใช้ข้อมูลจำลองของร้านคุณ ปรับได้จนพอใจ'],['ติดตั้งเองตามคู่มือ','มีคู่มือรูปประกอบ และผู้ช่วย "น้องอาสา" ในแอป ข้อมูลอยู่ใน Google ของร้านคุณ']]
   .map(([b,p],i)=>`<div class="step glass"><span class="no">${i+1}</span><div><b>${esc(b)}</b><p>${esc(p)}</p></div></div>`).join('');
@@ -674,8 +680,8 @@ function briefText(d){return `บรีฟจากเว็บ ${C.brand}\nช�
 $('#bf').addEventListener('submit',async e=>{e.preventDefault();if($('#b-type').value==='custom:med')wait=true;const msg=$('#b-msg'),btn=$('#b-send');msg.innerHTML='';
   const d={kind:wait?'รอแจ้งเปิดตัว':'บรีฟ',name:val('#b-name'),shop:val('#b-shop'),type:appOf($('#b-type').value),typeLabel:$('#b-type').selectedOptions[0].textContent,users:$('#b-users').value,
     feats:[...document.querySelectorAll('#b-feats input:checked')].map(x=>x.value),detail:val('#b-detail'),contact:val('#b-contact'),hp:val('#b-hp'),consent:$('#b-ok').checked,page:location.href.slice(0,200)};
-  if(!wait&&LIVE_IDS.includes(d.type)&&!$('#b-pro').checked){msg.innerHTML=`<div class="alert a-info" role="alert"><b>ธุรกิจนี้มีแม่แบบพร้อมใช้แล้ว</b> สมัครสมาชิกแล้วดาวน์โหลดใช้ฟรีได้เลย ไม่ต้องรอเรา · ถ้าเป็นลูกค้าโปรอยู่แล้ว ติ๊ก "ฉันเป็นลูกค้าโปรแล้ว" แล้วส่งอีกครั้ง<div class="acts" style="margin-top:8px"><a class="btn btn-acc" href="?acc">ดาวน์โหลดฟรี</a><a class="btn btn-line" href="?install=${esc(d.type)}">ดูวิธีติดตั้ง</a></div></div>`;return}
-  if($('#b-pro').checked)d.kind='ลูกค้าโปร · สั่งทำเพิ่ม';
+  if(!wait&&LIVE_IDS.includes(d.type)&&!$('#b-pro').checked){msg.innerHTML=`<div class="alert a-info" role="alert"><b>ธุรกิจนี้มีแม่แบบพร้อมใช้แล้ว</b> สมัครสมาชิกแล้วดาวน์โหลดใช้ฟรีได้เลย ไม่ต้องรอเรา · ถ้าใช้แอปอยู่แล้วและอยากสั่งทำเพิ่ม ติ๊ก "ฉันใช้แอปอยู่แล้ว" แล้วส่งอีกครั้ง<div class="acts" style="margin-top:8px"><a class="btn btn-acc" href="?acc">ดาวน์โหลดฟรี</a><a class="btn btn-line" href="?install=${esc(d.type)}">ดูวิธีติดตั้ง</a></div></div>`;return}
+  if($('#b-pro').checked)d.kind='ลูกค้าที่ใช้แอปอยู่ · สั่งทำเพิ่ม';
   const err=!d.name?['#b-name','ใส่ชื่อผู้ติดต่อ']:!d.contact?['#b-contact','ใส่ LINE ID หรือเบอร์โทร เพื่อให้เราติดต่อกลับได้']:!/^[0-9+\-\s]{9,15}$|^@?[\w.\-]{3,30}$/.test(d.contact)?['#b-contact','ช่องติดต่อใส่ได้เป็นเบอร์โทร 9–10 หลัก หรือ LINE ID']:!d.consent?['#b-ok','กดยินยอมการเก็บข้อมูลก่อนส่ง']:null;
   if(err){msg.innerHTML=`<div class="alert a-bad" role="alert">${esc(err[1])}</div>`;$(err[0]).focus();return}
   btn.disabled=true;btn.textContent='กำลังส่ง…';
@@ -745,10 +751,10 @@ function tkPanel(v){const p=v.pkg,ts=v.tix||[];if(!p&&!ts.length&&!v.deal)return
     ${ts.map((x,i)=>({x,i})).reverse().map(({x,i})=>card(x,i)).join('')}
     ${v.canTicket?`<div class="tkcard"><b>เปิด ticket ครั้งที่ ${p.used+1}</b><div class="small muted">พิมพ์ทุกจุดที่อยากแก้ในรอบนี้ทีเดียว เป็นข้อ ๆ (ไม่เกิน ${S.points} จุด) ถ้ามีรูปหน้าจอ ส่งทาง LINE ประกอบได้</div>
       <textarea id="tk-text" maxlength="2000" placeholder="1. เอาเมนู ... ออก&#10;2. เพิ่มช่อง ... ในใบเสร็จ&#10;3. เปลี่ยนคำว่า ... เป็น ..."></textarea><div id="tk-err"></div><button class="btn btn-acc" type="button" id="tk-send">${icon('ticket','')}ส่งรายการแก้รอบนี้</button></div>`
-      :p&&p.left<1&&!ts.some(x=>TKS.indexOf(x.st)<4)?`<div class="alert a-info">ใช้ ticket ครบแล้ว ถ้าอยากแก้เพิ่ม ทักเราทาง LINE ได้เลย</div>`:''}
-    ${!p&&v.deal?`<div class="small muted">อยากปรับแอปให้ตรงกับร้าน (เอาเมนูออก เพิ่มช่อง เปลี่ยนคำ) เลือกแพ็กเกจปรับแต่งได้</div>
-      <div class="offer">${(v.offer?v.offer.pkgs:[]).map(o=>`<div><b>${baht(o.price)} บาท</b><span class="small">แก้ได้ ${o.n} ครั้ง</span></div>`).join('')}</div>
-      ${oaChat('')?`<a class="btn btn-ok" href="${esc(oaChat('สวัสดีครับ สนใจแพ็กเกจปรับแต่ง บรีฟเลขที่ '+v.id))}" target="_blank" rel="noopener">${icon('chat','')}สั่งแพ็กเกจปรับแต่งทาง LINE</a>`:''}`:''}</div>`}
+      :p&&p.left<1&&!ts.some(x=>TKS.indexOf(x.st)<4)?`<div class="alert a-info">ใช้รอบปรับแต่งครบแล้ว ซื้อรอบเพิ่มได้ (${C.pkgs.map(p=>esc(p.title+' '+p.price+' บาท')).join(' / ')}) <a href="?pay=${esc(v.appId||"")}&item=r1">ซื้อรอบเพิ่ม</a></div>`:''}
+    ${!p&&v.deal?`<div class="small muted">อยากปรับแอปให้ตรงกับร้าน (เอาเมนูออก เพิ่มช่อง เปลี่ยนคำ) ซื้อรอบปรับแต่งได้</div>
+      <div class="offer">${(v.offer?v.offer.pkgs:[]).map(o=>`<div><b>${baht(o.price)} บาท</b><span class="small">${esc(o.name)}</span></div>`).join('')}</div>
+      ${oaChat('')?`<a class="btn btn-ok" href="${esc(oaChat('สวัสดีครับ สนใจแพ็กเกจปรับแต่ง บรีฟเลขที่ '+v.id))}" target="_blank" rel="noopener">${icon('chat','')}สั่งรอบปรับแต่งทาง LINE</a>`:''}`:''}</div>`}
 const baht=n=>Number(n||0).toLocaleString('th-TH');
 function bindTk(tk,v){const s=$('#tk-send');
   if(s)s.onclick=async()=>{s.disabled=true;s.textContent='กำลังส่ง…';try{await leadCall('pubTicket',[tk,$('#tk-text').value]);toast('ส่งรายการแล้ว ดูสถานะได้ที่นี่');trkShow(tk).then(()=>$('#tkp')&&$('#tkp').scrollIntoView({block:'start'}))}catch(x){$('#tk-err').innerHTML=`<div class="alert a-bad" role="alert">${esc(x.message)}</div>`;s.disabled=false;s.textContent='ส่งอีกครั้ง'}};
@@ -838,7 +844,7 @@ function fig(k,a){a=a||{};const app=a.menu||'แอปร้านค้า',rep
   return '';
 }
 
-/* ===== บัญชีสมาชิก · ดาวน์โหลดฉบับฟรี · ซื้อโปร (แนบสลิป) · ติดตามคำสั่งซื้อ · คู่มือติดตั้ง · ข้อตกลง / นโยบาย =====
+/* ===== บัญชีสมาชิก · ดาวน์โหลดแอป · ซื้อรอบปรับแต่ง (แนบสลิป) · ติดตามคำสั่งซื้อ · คู่มือติดตั้ง · ข้อตกลง / นโยบาย =====
  * หน้าเหล่านี้แสดงในกล่อง #trk (ซ่อนหน้าแรก) ตามพารามิเตอร์: ?acc ?pay=แอป ?o=รหัส ?install=แอป ?terms ?privacy */
 const MEMK='aaMem';
 const mtok=()=>{try{return localStorage.getItem(MEMK)||''}catch(e){return ''}};
@@ -856,13 +862,15 @@ function dlText(name,text){const a=document.createElement('a');a.href=URL.create
 const TERMS=[
  ['ผู้ให้บริการ','Asuraphong Apps ("เรา") ให้บริการแอปสำหรับธุรกิจขนาดเล็กที่ทำงานบน Google Sheets และ Google Apps Script ของผู้ใช้เอง ติดต่อ LINE '+C.line+' หรืออีเมล '+C.email],
  ['บัญชีสมาชิก','ผู้สมัครต้องให้ข้อมูลจริง ยืนยันอีเมล และเก็บรหัสผ่านเป็นความลับ 1 บัญชีใช้ได้ 1 คน เราอาจระงับบัญชีที่ใช้งานผิดวัตถุประสงค์'],
- ['สิทธิ์การใช้ฉบับฟรี','ดาวน์โหลดและใช้ฉบับฟรีในกิจการของตนเองได้โดยไม่มีค่าใช้จ่าย ภายใต้ข้อจำกัดของแพ็กเกจฟรี ห้ามนำไปขาย ให้เช่า หรืออ้างเป็นผลงานของตนเอง'],
- ['แพ็กเกจโปร','ซื้อขาดจ่ายครั้งเดียว 1 รหัสไลเซนส์ใช้ได้ 1 กิจการ (ผูกกับ Google Sheets ไฟล์แรกที่เปิดใช้) ผูกกับ 1 แอปและ 1 ประเภทธุรกิจที่เลือกตอนซื้อ (แอปจะล็อกประเภทนั้นไว้ หากเลือกผิดแจ้งเราเพื่อเปลี่ยนให้ภายใน 7 วัน) ไม่ได้รวมทุกแอป ได้รับแม่แบบตามที่แสดงในเดโม ไม่ล็อกจำนวนรายการ (ใช้งานลื่นในขนาดที่แนะนำ) ไม่รวมงานปรับแต่ง ห้ามเผยแพร่หรือแจกจ่ายโค้ดฉบับโปรและรหัสไลเซนส์'],
- ['ขนาดการใช้งานและระบบของ Google','แอปทำงานบน Google Sheets, Google Apps Script และ Google Drive ในบัญชีของผู้ใช้เอง ความเร็วและการทำงานขึ้นกับโควต้าและการให้บริการของ Google ซึ่งเราควบคุมไม่ได้ เช่น จำนวนคำสั่งที่ทำงานพร้อมกัน จำนวนอีเมลต่อวัน และขนาดข้อมูลในชีต แพ็กเกจโปรไม่ล็อกจำนวนรายการ แต่ออกแบบให้ใช้งานได้ลื่นในขนาดที่แนะนำบนเว็บไซต์ (เช่น หอพักไม่เกินประมาณ 200 ห้อง) หากกิจการใหญ่กว่านั้นอาจทำงานช้าลง ซึ่งไม่ถือว่าแอปใช้งานไม่ได้ตามเดโม เราไม่รับประกันว่าระบบจะทำงานได้ตลอดเวลาโดยไม่สะดุด (ไม่มีข้อตกลงระดับการให้บริการ / SLA)'],
- ['การชำระเงินและการคืนเงิน','ชำระผ่านพร้อมเพย์ / โอนเงิน และแนบสลิป เราจะตรวจสอบและส่งมอบภายใน 24 ชั่วโมง (ปกติ 17:00–21:00 น.) หากชำระแล้วแต่เรายังไม่ได้ส่งมอบรหัส ขอคืนเงินเต็มจำนวนได้ หลังส่งมอบรหัสและโค้ดแล้วงดคืนเงิน เว้นแต่แอปใช้งานไม่ได้ตามที่แสดงในเดโมและเราแก้ไขไม่ได้ภายใน 7 วัน'],
- ['แพ็กเกจปรับแต่ง','699 บาท แก้ได้ 2 ครั้ง / 1,200 บาท แก้ได้ 4 ครั้ง 1 ครั้ง = แก้ 1 รอบ ไม่เกิน 5 จุด เนื้องานไม่เกิน 3 ชั่วโมง งานที่ใหญ่กว่านี้ประเมินราคาแยก'],
+ ['สิทธิ์การใช้แอป','ดาวน์โหลดและใช้แอปฉบับเต็มในกิจการของตนเองได้โดยไม่มีค่าใช้จ่าย ไม่ต้องใช้รหัส 1 กิจการหรือ 1 สาขาติดตั้งใน Google Sheets ของตนเอง 1 ไฟล์ ห้ามนำโค้ดไปขาย ให้เช่า แจกจ่ายต่อในเชิงการค้า หรืออ้างเป็นผลงานของตนเอง'],
+ ['ลูกค้าโปรเดิม','ผู้ที่ซื้อแพ็กเกจโปรก่อนวันที่ 16 พ.ย. 2569 ใช้รหัสไลเซนส์และโค้ดเดิมได้ตามปกติ และใช้ไฟล์ฉบับเต็มรุ่นใหม่ได้เช่นกัน ห้ามเผยแพร่รหัสไลเซนส์'],
+ ['ขนาดการใช้งานและระบบของ Google','แอปทำงานบน Google Sheets, Google Apps Script และ Google Drive ในบัญชีของผู้ใช้เอง ความเร็วและการทำงานขึ้นกับโควต้าและการให้บริการของ Google ซึ่งเราควบคุมไม่ได้ เช่น จำนวนคำสั่งที่ทำงานพร้อมกัน จำนวนอีเมลต่อวัน และขนาดข้อมูลในชีต แอปไม่ล็อกจำนวนรายการ แต่ออกแบบให้ใช้งานได้ลื่นในขนาดที่แนะนำบนเว็บไซต์ (เช่น หอพักไม่เกินประมาณ 200 ห้อง) หากกิจการใหญ่กว่านั้นอาจทำงานช้าลง ซึ่งไม่ถือว่าแอปใช้งานไม่ได้ตามเดโม เราไม่รับประกันว่าระบบจะทำงานได้ตลอดเวลาโดยไม่สะดุด (ไม่มีข้อตกลงระดับการให้บริการ / SLA)'],
+ ['การชำระเงินและการคืนเงิน','ชำระค่ารอบปรับแต่งผ่านพร้อมเพย์ / โอนเงิน และแนบสลิป เราตรวจสอบภายใน 24 ชั่วโมง (ปกติ 17:00–21:00 น.) หากชำระแล้วแต่ยังไม่ได้เริ่มงาน ขอคืนเงินเต็มจำนวนได้ รอบที่ซื้อแยกและยังไม่ได้ใช้ ขอคืนได้ภายใน 30 วันหลังซื้อ รอบที่ส่งงานให้ตรวจแล้วงดคืนเงิน'],
+ ['ราคา','ราคาที่ใช้คือราคาที่แสดงบนเว็บไซต์ ณ วันที่สั่งซื้อ ปัจจุบัน: แอป Google Sheets ทุกตัวใช้ฟรี · '+C.pkgs.map(p=>p.title+' '+p.price+' บาท').join(' · ')],
+ ['รอบปรับแต่ง','1 รอบ = แก้ 1 ครั้ง (1 ticket) ไม่เกิน '+C.sla.points+' จุด เนื้องานไม่เกิน '+C.sla.hours+' ชั่วโมง ส่งให้ตรวจภายใน '+C.sla.days+' วันหลังรับเรื่อง ถ้ายังไม่ตรงขอแก้ต่อในรอบเดิมได้โดยไม่นับรอบเพิ่ม งานแก้ทั้งหน้า ทั้งระบบ หรือเพิ่มเมนูใหม่ ไม่ใช้รอบปรับแต่ง และประเมินราคาแยกก่อนเริ่มงาน รอบที่ซื้อแล้วไม่มีวันหมดอายุ แต่ไม่คืนเงินเป็นรายรอบ'],
+ ['แพ็กเกจอัลติเมต','ระบบบนคลาวด์ (ตอนนี้มีเฉพาะหอพัก) ค่าไลเซนส์ '+C.price.ultimateSetup+' บาท ครั้งเดียว และค่าดูแลเซิร์ฟเวอร์และคลาวด์รายเดือนตามขนาดหอ ('+C.price.ultimateTiers.map(([k,v])=>k+' '+(v?v+' บาท':'สอบถามราคา')).join(' · ')+') มีข้อตกลงการใช้บริการแยกให้อ่านและยอมรับก่อนเริ่มใช้งาน'],
  ['ข้อมูลของกิจการ','ข้อมูลที่ร้านบันทึกในแอปอยู่ใน Google ของร้านเอง เราไม่เข้าถึงข้อมูลลูกค้าของร้าน (แอปส่งมาเฉพาะตัวเลขสรุป เช่น จำนวนห้อง จำนวนบิล และสถานะไลเซนส์) ร้านเป็นผู้ควบคุมข้อมูลส่วนบุคคลของลูกค้าตนเอง และต้องปฏิบัติตาม พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล'],
- ['ข้อห้าม','ห้ามใช้แอปเก็บข้อมูลผู้ป่วยหรือประวัติการรักษา ห้ามใช้ทำสิ่งผิดกฎหมาย ห้ามพยายามเจาะระบบ ข้ามระบบไลเซนส์ หรือดัดแปลงฉบับฟรีให้เป็นฉบับโปร'],
+ ['ข้อห้าม','ห้ามใช้แอปเก็บข้อมูลผู้ป่วยหรือประวัติการรักษา ห้ามใช้ทำสิ่งผิดกฎหมาย ห้ามพยายามเจาะระบบของเรา หรือของผู้ใช้อื่น'],
  ['ความรับผิด','แอปให้บริการตามสภาพ เราพยายามแก้ไขข้อผิดพลาดอย่างเหมาะสม แต่ไม่รับผิดชอบความเสียหายทางอ้อม ความรับผิดรวมไม่เกินจำนวนเงินที่ผู้ใช้ชำระให้เรา ผู้ใช้ควรเปิดการสำรองข้อมูลอัตโนมัติที่แอปตั้งให้'],
  ['ลิขสิทธิ์','โค้ด ชื่อ และหน้าตาของแอปเป็นลิขสิทธิ์ของ Asuraphong Apps คุ้มครองตามกฎหมายลิขสิทธิ์'],
  ['การเปลี่ยนแปลงข้อตกลง','เราอาจปรับปรุงข้อตกลงนี้ โดยแจ้งบนเว็บไซต์ และขอให้ยอมรับฉบับใหม่เมื่อเข้าสู่ระบบครั้งถัดไป ข้อตกลงนี้อยู่ภายใต้กฎหมายไทย']];
@@ -934,11 +942,11 @@ async function vMe(next){
   if(next&&/^pay/.test(next))return go2(next);
   const ready={};r.free.forEach(f=>ready[f.app]=f.ready);
   page(`<div class="me-h"><div><span class="eyebrow">บัญชีของฉัน</span><h2>สวัสดีครับ ${esc(r.me.name||r.me.email)}</h2><div class="small muted">${esc(r.me.email)} · ${esc(r.me.phone)}</div></div><button class="btn btn-line" id="m-out">ออกจากระบบ</button></div>
-    <h3>ดาวน์โหลดแอปฉบับฟรี</h3><p class="small muted">ฉบับฟรีโหลดลองได้ทุกแอป กด "ดาวน์โหลดโค้ด" แล้วทำตามคู่มือติดตั้ง (ประมาณ 10 นาที ใช้คอมพิวเตอร์จะสะดวกที่สุด)</p>
-    <div class="alert a-info small"><b>แพ็กเกจโปร 299 บาท = 1 กิจการ</b> ไม่ใช่ทุกแอป · ตอนซื้อเลือก 1 แอป + 1 ประเภทธุรกิจ ใช้กับ Google Sheets ได้ 1 ไฟล์ · มีหลายกิจการต้องซื้อแยกกัน</div>
+    <h3>ดาวน์โหลดแอป (ฉบับเต็ม ใช้ฟรี)</h3><p class="small muted">ฉบับฟรีโหลดลองได้ทุกแอป กด "ดาวน์โหลดโค้ด" แล้วทำตามคู่มือติดตั้ง (ประมาณ 10 นาที ใช้คอมพิวเตอร์จะสะดวกที่สุด)</p>
+    <div class="alert a-info small"><b>ทุกแอปเปิดครบทุกเมนู ไม่ต้องใช้รหัส</b> · 1 กิจการหรือ 1 สาขา ติดตั้งใน Google Sheets 1 ไฟล์ · อยากปรับให้ตรงร้าน ซื้อรอบปรับแต่งได้</div>
     <div class="dlg">${appLive().map(a=>`<article class="dl glass"><div class="app-h"><span class="app-ic ${a.grad}">${icon(a.icon,'')}</span><div><b>${esc(a.name)}</b><div class="small muted">${esc(a.for)}</div></div></div>
       <div class="acts">${ready[a.id]?`<button class="btn btn-acc" data-dl="${a.id}">${icon('open','')}ดาวน์โหลดโค้ด</button><button class="btn btn-line" data-cp="${a.id}">คัดลอกโค้ด</button>`:'<span class="small muted">กำลังเตรียมไฟล์</span>'}
-        <a class="btn btn-line" href="?install=${a.id}">คู่มือติดตั้ง</a><a class="btn btn-line" href="${esc(a.demo||'#')}" target="_blank" rel="noopener">ลองเดโม</a><a class="btn btn-line" href="?pay=${a.id}">ซื้อโปร ${esc(C.price.pro)}฿ · 1 กิจการ</a></div></article>`).join('')}</div>
+        <a class="btn btn-line" href="?install=${a.id}">คู่มือติดตั้ง</a><a class="btn btn-line" href="${esc(a.demo||'#')}" target="_blank" rel="noopener">ลองเดโม</a><a class="btn btn-line" href="?pay=${a.id}&item=r1">ซื้อรอบปรับแต่ง</a></div></article>`).join('')}</div>
     <h3>คำสั่งซื้อของฉัน</h3>${r.orders.length?`<div class="revl">${r.orders.map(o=>`<a class="rv olink" href="?o=${esc(o.tok)}"><div class="rv-h"><b>${esc(o.item)} · ${esc(o.appName)}</b><span class="rst ${o.status==='ยืนยันแล้ว'?'s2':o.status==='ไม่ผ่าน'?'s3':'s0'}">${esc(o.status)}</span></div><span class="small muted">${esc(o.id)} · ${dtTH(o.at)} · ${baht(o.amount)} บาท</span></a>`).join('')}</div>`:'<div class="small muted">ยังไม่มีคำสั่งซื้อ</div>'}
     <details><summary class="small">ตั้งค่าบัญชี</summary><div class="tform" style="margin-top:10px"><label class="consent"><input type="checkbox" id="m-mk" ${r.me.mkt?'checked':''}><span>รับข่าวสารและโปรโมชันทางอีเมล</span></label>
       <div class="acts"><button class="btn btn-line" data-doc="terms">ข้อตกลงการใช้งาน</button><button class="btn btn-line" data-doc="privacy">นโยบายความเป็นส่วนตัว</button></div>
@@ -949,21 +957,22 @@ async function vMe(next){
   $('#m-del').onclick=async()=>{const pw=prompt('ใส่รหัสผ่านเพื่อยืนยันการลบบัญชี\n(ข้อมูลบัญชีจะถูกลบ ไลเซนส์ที่ซื้อแล้วยังใช้ได้ตามปกติ)');if(!pw)return;
     try{await leadCall('pubDeleteMe',[mtok(),pw]);setMtok('');toast('ลบบัญชีแล้ว');go2('')}catch(x){$('#m-e').innerHTML=errA(x.message)}};
   const code=async(app,b)=>{bindBusy(b,true,'กำลังเตรียม…');try{const r=await leadCall('pubFreeCode',[mtok(),app]);bindBusy(b,false);return r.code}catch(x){bindBusy(b,false);toast(x.message);return null}};
-  document.querySelectorAll('[data-dl]').forEach(b=>b.onclick=async()=>{const c=await code(b.dataset.dl,b);if(c){dlText(b.dataset.dl+'-Code.free.gs',c);toast('ดาวน์โหลดแล้ว ทำตามคู่มือติดตั้งต่อได้เลย')}});
-  document.querySelectorAll('[data-cp]').forEach(b=>b.onclick=async()=>{const c=await code(b.dataset.cp,b);if(c)navigator.clipboard.writeText(c).then(()=>toast('คัดลอกโค้ดแล้ว ไปวางใน Apps Script ได้เลย')).catch(()=>{dlText(b.dataset.cp+'-Code.free.gs',c)})});
+  document.querySelectorAll('[data-dl]').forEach(b=>b.onclick=async()=>{const c=await code(b.dataset.dl,b);if(c){dlText(b.dataset.dl+'-Code.gs',c);toast('ดาวน์โหลดแล้ว ทำตามคู่มือติดตั้งต่อได้เลย')}});
+  document.querySelectorAll('[data-cp]').forEach(b=>b.onclick=async()=>{const c=await code(b.dataset.cp,b);if(c)navigator.clipboard.writeText(c).then(()=>toast('คัดลอกโค้ดแล้ว ไปวางใน Apps Script ได้เลย')).catch(()=>{dlText(b.dataset.cp+'-Code.gs',c)})});
 }
 /* ---------- ซื้อแพ็กเกจ (แนบสลิป) ---------- */
 function ppQR(amt){return ppPayload2(C.pay.pp,amt)}
 async function vPay(app,item0){
   if(!mtok())return vAcc('pay='+(app||'')+(item0?'&item='+item0:''));
   let me;try{me=(await leadCall('pubMe',[mtok()])).me}catch(e){setMtok('');return vAcc('pay='+(app||''))}
-  const apps=appLive();app=apps.some(a=>a.id===app)?app:apps[0].id;let item=['pro','p2','p4'].includes(item0)?item0:'pro',slip='';
-  const items=[['pro','แพ็กเกจโปร (ซื้อขาด)',+String(C.price.pro).replace(/\D/g,'')],...C.pkgs.map((p,i)=>[i?'p4':'p2','แพ็กเกจปรับแต่ง '+p.n+' ครั้ง',+String(p.price).replace(/\D/g,'')])];
-  page(`<span class="eyebrow">ซื้อแพ็กเกจ</span><h2>โอนเงิน แล้วแนบสลิป</h2><p class="small muted">แอดมินตรวจและส่งรหัสไลเซนส์ + โค้ดโปรให้ในหน้าติดตามคำสั่งซื้อ ภายใน 24 ชั่วโมง (ปกติ ${esc(C.hours)})</p>
+  const apps=appLive();app=apps.some(a=>a.id===app)?app:apps[0].id;const items=[...C.pkgs.map(p=>[p.id,p.title,+String(p.price).replace(/\D/g,''),p.lic?1:0])];
+  let item=items.some(x=>x[0]===item0)?item0:items[0][0],slip='';const isLic=()=>!!(items.find(x=>x[0]===item)||[])[3];
+  page(`<span class="eyebrow">ซื้อรอบปรับแต่ง</span><h2>โอนเงิน แล้วแนบสลิป</h2><p class="small muted">แอดมินตรวจยอดภายใน 24 ชั่วโมง แล้วส่งรายการแก้ (ticket) ได้ที่หน้าติดตามงาน (ปกติ ${esc(C.hours)})</p>
     <form class="tform" id="pf" novalidate><div class="field"><span class="lab">1. แอป</span><div class="chips">${apps.map(a=>`<button type="button" class="chip pchip" data-a="${a.id}" aria-pressed="${a.id===app}">${esc(a.name)}</button>`).join('')}</div></div>
       <div class="field" id="p-bzf"><span class="lab">ประเภทธุรกิจของคุณ <span class="opt">(เลือก 1 อย่าง)</span></span><div class="chips" id="p-bz"></div>
-        <div class="alert a-info small" style="margin-top:8px">แพ็กเกจโปร 299 บาท = <b>1 กิจการ</b> (1 แอป + 1 ประเภทธุรกิจ + 1 Google Sheets) แอปจะล็อกประเภทที่เลือกนี้ไว้ มีหลายกิจการต้องซื้อแยกกันครับ</div></div>
-      <div class="field"><span class="lab">2. รายการ</span><div class="chips">${items.map(([k,l,p])=>`<button type="button" class="chip pchip" data-i="${k}" aria-pressed="${k===item}">${esc(l)} · ${baht(p)}฿</button>`).join('')}</div></div>
+        <div class="alert a-info small" style="margin-top:8px">แพ็กเกจโปร = <b>1 กิจการ</b> (1 แอป + 1 ประเภทธุรกิจ + 1 Google Sheets) แอปจะล็อกประเภทที่เลือกนี้ไว้ มีหลายกิจการต้องซื้อแยกกันครับ</div></div>
+      <div class="field"><span class="lab">2. รายการ</span><div class="chips">${items.map(([k,l,p])=>`<button type="button" class="chip pchip" data-i="${k}" aria-pressed="${k===item}">${esc(l)} · ${baht(p)}฿</button>`).join('')}</div>
+        <div class="alert a-info small" id="p-rn" style="margin-top:8px" hidden>เลือกแอปให้ตรงกับที่ใช้อยู่ 1 รอบแก้ได้ไม่เกิน ${C.sla.points} จุด หลังยืนยันแล้วส่งรายการแก้ได้ที่หน้าติดตามงาน</div></div>
       <div class="paybox glass"><div><b>3. สแกนจ่าย</b><div class="small muted">ใช้แอปธนาคารใดก็ได้</div><div class="ppqr" id="p-qr"></div></div>
         <div class="small"><div class="ppamt" id="p-amt"></div><div>ชื่อบัญชี <b>${esc(C.pay.name)}</b></div><div>หรือโอนเข้า ${esc(C.pay.bank)}</div><div class="small muted" style="margin-top:6px">โอนตามยอดพอดี แล้วเก็บสลิปไว้</div></div></div>
       <div class="field"><label for="p-org">ชื่อกิจการ <span class="opt">(จะแสดงท้ายแอปของคุณ)</span></label><input id="p-org" maxlength="80" placeholder="เช่น ร้านชำป้าแดง"></div>
@@ -974,19 +983,19 @@ async function vPay(app,item0){
       <p class="small muted">ส่งสลิปทาง LINE ${esc(C.line)} แทนได้ แต่จะได้รหัสเร็วกว่าถ้าแนบที่หน้านี้</p></form>`);
   document.querySelectorAll('[data-doc]').forEach(b=>b.onclick=()=>showDoc(b.dataset.doc));
   let biz='';const cfg=()=>C.apps.find(a=>a.id===app)||{};
-  const paintBz=()=>{const T=cfg().types||[];if(!T.some(t=>t[0]===biz))biz='';$('#p-bzf').hidden=item!=='pro';
+  const paintBz=()=>{const T=cfg().types||[];if(!T.some(t=>t[0]===biz))biz='';$('#p-bzf').hidden=!isLic();$('#p-rn').hidden=isLic();
     $('#p-bz').innerHTML=T.map(([k,l])=>`<button type="button" class="chip pchip" data-bz="${k}" aria-pressed="${k===biz}">${esc(l)}</button>`).join('');
     document.querySelectorAll('[data-bz]').forEach(b=>b.onclick=()=>{biz=b.dataset.bz;document.querySelectorAll('[data-bz]').forEach(x=>x.setAttribute('aria-pressed',x===b));paint()})};
-  const paint=()=>{const it=items.find(x=>x[0]===item);$('#p-amt').innerHTML=`ยอดโอน <b>${baht(it[2])}</b> บาท<div class="small muted">${esc(it[1])} · ${esc((apps.find(a=>a.id===app)||{}).name||'')}${item==='pro'&&biz?' · '+esc(((cfg().types||[]).find(t=>t[0]===biz)||[])[1]||''):''}</div>`;
+  const paint=()=>{const it=items.find(x=>x[0]===item);$('#p-amt').innerHTML=`ยอดโอน <b>${baht(it[2])}</b> บาท<div class="small muted">${esc(it[1])} · ${esc((apps.find(a=>a.id===app)||{}).name||'')}${isLic()&&biz?' · '+esc(((cfg().types||[]).find(t=>t[0]===biz)||[])[1]||''):''}</div>`;
     qrSvg2(ppQR(it[2])).then(s=>{$('#p-qr').innerHTML=s}).catch(()=>{$('#p-qr').innerHTML='<div class="small muted">โหลด QR ไม่ได้ โอนเข้าบัญชีด้านขวาแทนได้</div>'})};
   document.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{app=b.dataset.a;document.querySelectorAll('[data-a]').forEach(x=>x.setAttribute('aria-pressed',x===b));paintBz();paint()});
   document.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{item=b.dataset.i;document.querySelectorAll('[data-i]').forEach(x=>x.setAttribute('aria-pressed',x===b));paintBz();paint()});paintBz();paint();
   $('#p-sl').onchange=async()=>{const f=$('#p-sl').files[0];if(!f)return;try{slip=await shrink(f,1400,.82);$('#p-im').src=slip;$('#p-im').hidden=false;$('#p-slt').textContent='เปลี่ยนรูป'}catch(e){toast('เปิดรูปไม่ได้ ลองรูปอื่น')}};
   $('#pf').onsubmit=async e=>{e.preventDefault();const b=e.target.querySelector('[type=submit]');
-    if(item==='pro'&&!biz){$('#p-err').innerHTML=errA('เลือกประเภทธุรกิจของคุณก่อน (1 รหัสใช้ได้ 1 กิจการ)');$('#p-bzf').scrollIntoView({block:'center'});return}
+    if(isLic()&&!biz){$('#p-err').innerHTML=errA('เลือกประเภทธุรกิจของคุณก่อน (1 รหัสใช้ได้ 1 กิจการ)');$('#p-bzf').scrollIntoView({block:'center'});return}
     if(!slip){$('#p-err').innerHTML=errA('แนบรูปสลิปก่อน');return}if(!$('#p-ok').checked){$('#p-err').innerHTML=errA('กดยินยอมก่อนส่ง');return}
     bindBusy(b,true,'กำลังส่งสลิป…');
-    try{const r=await leadCall('pubOrder',[{mtok:mtok(),app:app,item:item,biz:item==='pro'?biz:'',org:$('#p-org').value,name:$('#p-nm').value,contact:$('#p-ct').value,slip:slip,consent:true,hp:$('#p-hp').value}]);go2('o='+r.tok)}
+    try{const r=await leadCall('pubOrder',[{mtok:mtok(),app:app,item:item,biz:isLic()?biz:'',org:$('#p-org').value,name:$('#p-nm').value,contact:$('#p-ct').value,slip:slip,consent:true,hp:$('#p-hp').value}]);go2('o='+r.tok)}
     catch(x){$('#p-err').innerHTML=errA(x.message);bindBusy(b,false)}};
 }
 function shrink(file,max,q){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement('canvas');
@@ -1012,7 +1021,7 @@ async function vOrder(tk){
       <div class="lic"><span class="small muted">รหัสไลเซนส์ของคุณ</span><b class="mono" id="o-lic">${esc(v.lic)}</b><button class="btn btn-line" id="o-lc">คัดลอกรหัส</button></div>
       <div class="acts">${v.hasCode?`<button class="btn btn-acc" id="o-dl">${icon('open','')}ดาวน์โหลด Code.pro.gs</button><button class="btn btn-line" id="o-cc">คัดลอกโค้ดโปร</button>`:'<div class="alert a-info small">ไฟล์โค้ดโปรกำลังเตรียม แอดมินจะส่งให้ทาง LINE</div>'}</div>
       <div class="small muted">ดาวน์โหลดแล้ว ${v.dl}/${v.dlMax} ครั้ง · รหัส 1 ชุดใช้ได้ 1 กิจการ ห้ามแจกต่อ</div>
-      <h3 style="margin-top:10px">ติดตั้งแพ็กเกจโปร 5 ขั้น</h3>${proSteps(v.app,v.lic)}`:''}
+      <h3 style="margin-top:10px">ติดตั้งแพ็กเกจโปร 5 ขั้น</h3>${proSteps(v.app,v.lic)}${v.track?`<div class="nowst"><span class="small">แพ็กเกจนี้มีรอบปรับแต่ง</span><b>ติดตั้งเสร็จแล้ว ส่งรายการที่อยากแก้ได้เลย</b><span>1 รอบ แก้ได้ไม่เกิน ${C.sla.points} จุด</span></div><a class="btn btn-acc" href="?b=${esc(v.track)}">ไปหน้าติดตามงาน / เปิด ticket</a>`:''}`:''}
     ${ok&&!v.pro?`<div class="nowst"><span class="small">ยืนยันการชำระเงินแล้ว</span><b>เปิด ticket งานแก้ได้เลยครับ</b><span>ส่งรายการที่อยากแก้ (ticket แรก) ในหน้าติดตามงาน</span></div>${v.track?`<a class="btn btn-acc" href="?b=${esc(v.track)}">ไปหน้าติดตามงาน / เปิด ticket</a>`:''}`:''}
     <a class="btn btn-line" href="?acc">บัญชีของฉัน</a>`);
   {const c=$('#o-cp');if(c)c.onclick=()=>copyText(location.href)}
@@ -1045,7 +1054,7 @@ function vInstall(app){
       ['ทำให้ใช้งานได้','กลับมาที่ Apps Script → <b>การทำให้ใช้งานได้</b> → <b>การทำให้ใช้งานได้รายการใหม่</b> → ⚙ เลือก <b>เว็บแอป</b> → ดำเนินการในฐานะ: <b>ฉัน</b> · ผู้มีสิทธิ์เข้าถึง: <b>ทุกคน</b> → ทำให้ใช้งานได้ → คัดลอก <b>URL เว็บแอป</b> (ลงท้าย /exec)',fig('deploy',a)+fig('url',a)],
       ['เชื่อมหน้าแอปกับชีต','เปิด <a href="'+appUrl(app)+'" target="_blank" rel="noopener">'+appUrl(app).replace('https://','')+'</a> → วางลิงก์ /exec → เชื่อมต่อ → จะได้ <b>ลิงก์ร้าน</b> + QR ส่งให้พนักงานได้เลย พนักงานเปิดแล้วกดสมัคร เจ้าของกดอนุมัติในแอป',fig('connect',a)]])}
     <div class="alert a-info small"><b>ติดขัดตรงไหน?</b> เปิดแอปแล้วกดปุ่มผู้ช่วย "น้องอาสา" มุมขวาล่าง มีคู่มือการใช้งานทีละขั้น หรือทัก LINE ${esc(C.line)} พร้อมรูปหน้าจอ</div>
-    <h3>อัปเกรดเป็นแพ็กเกจโปรด้วยตัวเอง</h3><p class="small">ซื้อที่ <a href="?pay=${app}">หน้าซื้อโปร</a> → โอน → แนบสลิป → รอแอดมินยืนยัน (ไม่เกิน 24 ชม.) → หน้าคำสั่งซื้อจะมีรหัสไลเซนส์และปุ่มดาวน์โหลดโค้ดโปร แล้วทำ 5 ขั้นนี้</p>${proSteps(app,'')}
+    <h3>อยากปรับแอปให้ตรงร้าน</h3><p class="small">ติดตั้งเสร็จแล้ว ถ้าอยากเอาเมนูออก เพิ่มช่อง หรือเปลี่ยนคำ ซื้อ <a href="?pay=${app}&item=r1">รอบปรับแต่ง</a> แล้วส่งรายการแก้ที่หน้าติดตามงาน</p>
     <div class="acts"><a class="btn btn-acc" href="?acc">สมัคร / ดาวน์โหลดฟรี</a><a class="btn btn-line" href="${esc(L.demo||'#')}" target="_blank" rel="noopener">ลองเดโมก่อน</a><a class="btn btn-line" href="./">หน้าแรก</a></div>`);
 }
 /* ---------- เส้นทาง ---------- */
@@ -1064,16 +1073,17 @@ if(mtok()){const ab=$('#accbtn');if(ab)ab.textContent='บัญชีของ�
 
 /* คำถาม */
 $('#faq-list').innerHTML=[['ข้อมูลของร้านเก็บไว้ที่ไหน','เก็บใน Google Sheets และ Google Drive ของบัญชีกิจการคุณเอง เราไม่เห็นข้อมูลลูกค้าของคุณ ถ้าเลิกใช้ ข้อมูลก็ยังอยู่กับคุณครบ'],
-  ['ใช้ฟรีได้จริงไหม','จริง แพ็กเกจฟรีใช้ได้ตลอด ไม่มีรายเดือน มีข้อจำกัดเรื่องจำนวน (ห้อง งาน สินค้า ผู้ใช้) และบางเมนู อยากได้เพิ่มค่อยอัปเกรดเป็นโปร '+C.price.pro+' บาท จ่ายครั้งเดียว'],
+  ['ใช้ฟรีได้จริงไหม','จริง ทุกแอปใช้ฟรีครบทุกเมนู ไม่ต้องใช้รหัส ไม่มีรายเดือน ไม่ล็อกจำนวน ข้อมูลอยู่ใน Google ของคุณเอง รายได้ของเรามาจากงานปรับแต่งและแพ็กเกจอัลติเมต (ระบบบนคลาวด์)'],
   ['ใช้บนคอมพิวเตอร์ หรือ iPad ได้ไหม','ได้ทุกเครื่อง ทั้งมือถือ Android และ iPhone แท็บเล็ต iPad โน้ตบุ๊ก และคอมพิวเตอร์ Windows / macOS หน้าจอจัดให้พอดีเอง ใช้ลิงก์เดียวกัน ข้อมูลตรงกันทุกเครื่อง'],
   ['ต้องลงแอปจาก Play Store / App Store ไหม','ไม่ต้อง เปิดผ่านลิงก์ใน Chrome, Safari หรือ Edge ได้เลย และกด "เพิ่มไปยังหน้าจอโฮม" ให้มีไอคอนเหมือนแอป'],
-  ['โปร '+C.price.pro+' บาท แก้ให้ตรงร้านด้วยไหม','โปรคือแม่แบบตามที่เห็นในเดโม ปลดล็อกทุกเมนู ไม่รวมงานแก้ ถ้าอยากปรับให้ตรงกับร้าน เลือกแพ็กเกจปรับแต่ง '+C.pkgs.map(p=>p.price+' บาท ('+p.n+' ครั้ง)').join(' หรือ ')],
+  ['แก้แอปให้ตรงร้านได้ไหม','ได้ ซื้อรอบปรับแต่ง '+C.pkgs.map(p=>p.title+' '+p.price+' บาท').join(' · ')+' (1 รอบ แก้ได้ไม่เกิน '+C.sla.points+' จุด) งานแก้ทั้งหน้า ทั้งระบบ หรือเมนูใหม่ ประเมินราคาแยก'],
   ['ticket งานแก้คืออะไร','1 ticket คือการแก้ 1 รอบ รวบรวมจุดที่อยากแก้ส่งมาทีเดียว ไม่เกิน '+C.sla.points+' จุด เนื้องานไม่เกิน '+C.sla.hours+' ชม. เราส่งให้ตรวจภายใน '+C.sla.days+' วันหลังรับเรื่อง ถ้ายังไม่ตรงขอแก้ต่อในรอบเดิมได้ ดูสถานะทุกขั้นได้ในหน้าติดตามงาน'],
-  ['จ่าย 299 บาท ได้ทุกแอปไหม','ไม่ใช่ครับ แพ็กเกจโปร 299 บาท = 1 กิจการ คือ 1 แอป + 1 ประเภทธุรกิจที่เลือกตอนซื้อ (เช่น แอปนัดคิว · ร้านทำผม) ใช้กับ Google Sheets ได้ 1 ไฟล์ แอปจะล็อกประเภทนั้นไว้ ถ้ามีหลายกิจการ หรือหลายสาขาแยกชีต ต้องซื้อแยกกัน ส่วนฉบับฟรีโหลดลองได้ทุกแอป','one'],
-  ['แอปรองรับกิจการใหญ่แค่ไหน','ทุกแอปทำงานบน Google Sheets และ Google Apps Script ของร้านเอง (ฟรี ไม่มีค่าเซิร์ฟเวอร์) จึงมีขีดจำกัดของ Google เช่น รองรับคำสั่งพร้อมกันประมาณ 30 คำสั่ง และชีตจะเริ่มช้าเมื่อข้อมูลสะสมหลายหมื่นแถว แพ็กเกจโปรไม่ล็อกจำนวน แต่ใช้งานลื่นที่สุดเมื่อไม่เกินขนาดแนะนำ: หอพัก ~200 ห้อง · ที่พักรายวัน ~60 ห้อง · ร้านค้า ~5,000 สินค้า และ ~300 บิล/วัน · ร้านซ่อม ~600 งาน/เดือน · นัดคิว ~80 นัด/วัน · ร้านอาหาร ~30 โต๊ะ และ ~400 บิล/วัน ใหญ่กว่านี้หรือมีหลายสาขา แนะนำแพ็กเกจอัลติเมต (ระบบบนคลาวด์ กำลังเปิดตัว)','size'],
+  ['ใช้ได้กี่แอป กี่กิจการ','ดาวน์โหลดได้ทุกแอป ใช้ได้ทุกกิจการ 1 กิจการหรือ 1 สาขา = Google Sheets 1 ไฟล์ ติดตั้งแยกกัน ข้อมูลไม่ปนกัน','one'],
+  ['แอปรองรับกิจการใหญ่แค่ไหน','ทุกแอปทำงานบน Google Sheets และ Google Apps Script ของร้านเอง (ฟรี ไม่มีค่าเซิร์ฟเวอร์) จึงมีขีดจำกัดของ Google เช่น รองรับคำสั่งพร้อมกันประมาณ 30 คำสั่ง และชีตจะเริ่มช้าเมื่อข้อมูลสะสมหลายหมื่นแถว แอปไม่ล็อกจำนวน แต่ใช้งานลื่นที่สุดเมื่อไม่เกินขนาดแนะนำ: หอพัก ~200 ห้อง · ที่พักรายวัน ~60 ห้อง · ร้านค้า ~5,000 สินค้า และ ~300 บิล/วัน · ร้านซ่อม ~600 งาน/เดือน · นัดคิว ~80 นัด/วัน · ร้านอาหาร ~30 โต๊ะ และ ~400 บิล/วัน ใหญ่กว่านี้หรือมีหลายสาขา แนะนำแพ็กเกจอัลติเมต (ระบบบนคลาวด์ ค่าไลเซนส์ '+C.price.ultimateSetup+' บาท + รายเดือนตั้งแต่ '+C.price.ultimate+' บาท ตอนนี้มีเฉพาะหอพัก)','size'],
+  ['เคยซื้อโปรไปแล้ว เป็นยังไงต่อ','ใช้ต่อได้ตามปกติ รหัสเดิมยังใช้ได้ ไม่มีอะไรหาย ถ้ามีคำถาม ทักเราทาง LINE '+C.line+' ได้เลย'],
   ['พนักงานไม่ค่อยถนัดมือถือ ใช้ได้ไหม','ปุ่มใหญ่ ขยายตัวหนังสือได้ 3 ระดับ แต่ละตำแหน่งเห็นเฉพาะเมนูของตัวเอง ในแอปมีผู้ช่วย "น้องอาสา" พาทำทีละขั้น และคู่มือรูปประกอบ'],
   ['ติดตั้งยากไหม','ไม่ยาก สมัครสมาชิก ดาวน์โหลดโค้ด แล้วทำตามคู่มือ 8 ขั้นที่มีรูปประกอบ ประมาณ 10 นาที ทำครั้งเดียว'],
-  ['ซื้อโปรแล้วได้รหัสเมื่อไร','โอนแล้วแนบสลิปที่หน้าซื้อโปร แอดมินตรวจยอดภายใน 24 ชั่วโมง แล้วรหัสไลเซนส์และปุ่มดาวน์โหลดโค้ดโปรจะขึ้นในหน้าติดตามคำสั่งซื้อของคุณเอง'],
+  ['ซื้อรอบปรับแต่งแล้วเริ่มงานเมื่อไร','โอนแล้วแนบสลิปที่หน้าซื้อ แอดมินตรวจยอดภายใน 24 ชั่วโมง แล้วปุ่มส่งรายการแก้ (ticket) จะขึ้นในหน้าติดตามงานของคุณ เราส่งงานให้ตรวจภายใน '+C.sla.days+' วันหลังรับเรื่อง'],
   ['ข้อมูลส่วนบุคคลปลอดภัยไหม','ผู้ใช้ทุกคนต้องกดยินยอมก่อนสมัคร ผู้จัดการต้องอนุมัติก่อนเข้าใช้ ระบบลบข้อมูลรถและเบอร์ของผู้ที่ย้ายออกเกิน 30 วันให้อัตโนมัติ'],
   ['สั่งทำตามบรีฟคิดเงินยังไง','แก้เล็กน้อยใช้แพ็กเกจปรับแต่ง ถ้าเป็นฟังก์ชันใหม่ทั้งเมนู ประเมินจากงานที่ต้องเพิ่มจากแม่แบบเดิม แจ้งราคาให้ทราบก่อนเริ่มทำ ไม่มีค่าใช้จ่ายถ้ายังไม่ตกลง']]
   .map(([q,a,id])=>`<details class="glass"${id?` id="faq-${id}"`:''}><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('');
