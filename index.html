@@ -3,9 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Asuraphong Apps</title>
+<title>Asuraphong Apps · แอปจัดการหอพัก ร้านอาหาร ร้านค้า บนมือถือ ใช้ฟรีได้</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="แอปสำหรับธุรกิจเล็ก หอพัก ที่พักรายวัน ร้านค้า ร้านซ่อม ใช้ได้ทุกอุปกรณ์ มือถือ แท็บเล็ต iPad โน้ตบุ๊ก คอมพิวเตอร์ เริ่มใช้ฟรี ข้อมูลอยู่ใน Google ของคุณเอง">
+<meta name="description" content="แอปสำเร็จรูปสำหรับธุรกิจเล็ก 8 ประเภท: หอพัก ตลาด / แผงค้า สำนักงานให้เช่า ที่พักรายวัน ร้านอาหาร ร้านค้า / สต็อก ร้านซ่อม และร้านนัดคิว ใช้ได้ทั้งมือถือและคอมพิวเตอร์ เริ่มใช้ฟรี ฉบับโปรซื้อขาด ไม่มีรายเดือน ข้อมูลอยู่ใน Google ของคุณเอง">
+<link rel="canonical" href="https://asuraphongapps54-prog.github.io/">
+<meta name="theme-color" content="#0f766e">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Asuraphong Apps">
+<meta property="og:locale" content="th_TH">
+<meta property="og:url" content="https://asuraphongapps54-prog.github.io/">
+<meta property="og:title" content="แอปจัดการธุรกิจสำเร็จรูป 8 ประเภท · ใช้ฟรีได้ · Asuraphong Apps">
+<meta property="og:description" content="หอพัก ตลาด สำนักงานให้เช่า ที่พักรายวัน ร้านอาหาร ร้านค้า ร้านซ่อม นัดคิว ใช้บนมือถือและคอม ฉบับโปรซื้อขาด ไม่มีรายเดือน">
+<meta property="og:image" content="https://asuraphongapps54-prog.github.io/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ตัวอย่างหน้าจอแอปบนคอมพิวเตอร์และมือถือ">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
@@ -570,7 +583,7 @@ function toast(t){const d=document.createElement('div');d.className='toast';d.se
 async function copyText(t,el){try{await navigator.clipboard.writeText(t);toast('คัดลอกแล้ว')}catch(e){if(el){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)}toast('เลือกข้อความไว้แล้ว กดคัดลอกเองได้เลย')}}
 
 const C=CONFIG,live=C.apps.filter(a=>a.status==='live'),soon=C.apps.filter(a=>a.status!=='live');
-document.title=C.brand;$('#brand').textContent=C.brand;$('#logo').innerHTML=icon('logo','');
+$('#brand').textContent=C.brand;$('#logo').innerHTML=icon('logo','');
 $('#os').innerHTML=[['phone','Android'],['phone','iPhone · iOS'],['tablet','iPad · แท็บเล็ต'],['laptop','Windows · macOS'],['monitor','คอมพิวเตอร์ PC']].map(([i,t])=>`<span>${icon(i,'')}${t}</span>`).join('');
 $('#trust').innerHTML=[['shield','ข้อมูลอยู่ใน Google ของคุณ'],['check','เริ่มใช้ฟรี ไม่มีรายเดือน'],['spark','ไม่ต้องลงโปรแกรม']].map(([i,t])=>`<span>${icon(i)}${t}</span>`).join('');
 $('#fl1').innerHTML=icon('laptop')+'เปิดลิงก์เดียวกันทุกเครื่อง';$('#fl2').innerHTML=icon('check')+'ข้อมูลตรงกันทันที';

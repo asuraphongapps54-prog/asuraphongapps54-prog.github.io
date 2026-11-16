@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asuraphongapps54-prog.github.io/sitemap.xml
